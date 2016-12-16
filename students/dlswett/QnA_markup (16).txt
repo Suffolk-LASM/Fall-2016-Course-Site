@@ -1,0 +1,121 @@
+Title: Expedited Green Cards
+Description: This QnA will help to determine whether or not an individual qualifies for an expedited green card, and, if so, what steps need to be taken to proceed.
+Author: Deborah Swett
+
+Q(1): Would you like to learn more about filing a green card under the "expedited" EB(1)(C) category?
+A: Yes
+	Q(1.1): Great. First, take a look at the regulations and section of law that applies to the <a href="https://www.uscis.gov/working-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1" target="_blank">EB(1)(C) Immigrant Visa Process</a> GOTO:2
+A: No
+	Q(1.2): Please come back to visit if you decide to proceed.
+
+Q(2): Based on your review of the requirements, do you think you might qualify for the EB(1)(C) category?
+A: Yes
+	Q(2.1): Wonderful! To determine if your employment profile meets the criteria for an "expedited" green card, it will be necessary for you to answer a series of questions based on your international employment profile. Are you ready to proceed?
+	A: Yes
+		Q(M_1): Great. What is your full name?<input type="hidden" name="name" value="EB1C QR"/>
+<input type="hidden" name="docx_uri" value="https://suffolk-lasm.github.io/Fall-2016-Course-Site/students/dlswett/EB1C%20QR.docx"/>
+		X:
+			Q(M_2): What is your current title?
+			X:
+				Q(2.1.1.1.1): Are you currently employed in the United States in a managerial or executive capacity?
+				A: Yes
+					Q(2.1.1.1.1.1):GOTO:M_3
+				A: No
+					Q(2.1.1.1.1.2):GOTO:2.2
+	A: No
+		Q(2.1.2):GOTO:1.2
+A: No
+	Q(2.2): Ok. If you are promoted in the future I'd suggest trying back again.
+
+Q(M_3): To proceed, it is necessary for you to indicate the roles you previously held at your Company abroad, including exact dates of tenure. To qualify, you must have been employed abroad for the same subsidiary, affiliate, or foreign entity for at least 1 year in a managerial or executive capacity. Therefore, please confirm the job title for your prior position(s) abroad.
+X:
+	Q(M_4): What was your business title?
+	X:
+		Q(M_5): What was your work location?
+		X:
+			Q(M_6): What were the exact start and end dates for this position (mm/dd/year)?
+			X:
+				Q(3.1.1.1.1): Did you hold any other positions while working abroad?
+				A: Yes
+					Q(M_7):What was your job title?
+					X:
+						Q(M_8): What was your business title?
+						X:
+							Q(M_9): What was your work location?
+							X:
+								Q(M_10): What were the exact start and end dates for this position (mm/dd/year)?
+								X:
+									Q(3.1.1.1.1.1.1.1.1.1):GOTO:M_15
+				A: No
+					Q(3.1.1.1.1.2):GOTO:M_15
+
+Q(M_15): In your previous role(s), did you have solid line managerial responsibility for direct reports? 
+A: Yes
+	Q(M_16): If so, how many?
+	X:
+		Q(M_17): In your previous role(s), did you provide ratings or recommendations for promotions? 
+		A: Yes
+			Q(M_18): If so, specify the roles in which you possessed this authority:
+			X:
+				Q(M_19): In any of your previous role(s), did you possess budgetary authority?
+				A: Yes
+					Q(M_20): Please provide the dollar amount of your budgetary authority:
+					X:
+						Q(4.1.1.1.1.1.1): Excellent. Now we must address your profile within the United States. Are you currently employed in a managerial or executive capacity? 
+						A: Yes
+							Q(M_21): In your current U.S. role, do you have solid line managerial responsibility for direct reports? 
+							A: Yes
+								Q(M_22): How many?
+								X:
+									Q(M_23): In your current U.S. role, do you provide ratings or recommendations for promotions?
+									A: Yes
+										Q(M_24): Do you possess budgetary authority in your current U.S. role?
+										A: Yes
+											Q(M_25): How much?
+											X:
+												Q(4.1.1.1.1.1.1.1.1.1.1.1.1): Congratulations! Based on all of your responses, it appears that you qualify for the EB(1)(C) expedited green card process! The firm will work on your support letter to outline your qualifications. However, in the meantime, for your immediate reference, please refer to the <a href="https://suffolk-lasm.github.io/Fall-2016-Course-Site/students/dlswett/EB1-C_I-140 - Permanent Resident Overview Memo.docx">Overview of Permanent Residence Processing Memorandum</a> and the <a href="https://suffolk-lasm.github.io/Fall-2016-Course-Site/students/dlswett/EB1-C_I-140 - AOS Memo.docx" target="_blank">Adjustment of Status Checklist</a>, as these documents will assist you with gathering and collecting the required documents necessary for submission.
+<br><br>Have you read the documents? 
+												A: No
+													Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1): Ok, once you have, you can proceed to the next step.<br><br>Have you read them now?
+													A: Yes
+														Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1.1):Wonderful! Are you ready to start preparing the forms?
+														A: Yes
+															Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1): Ok, Let’s proceed with the forms. Please visit
+<a href="https://www.uscis.gov/forms">USCIS.gov</a> and select and complete the I-485, G-325, I-765, and I-131 Applications. When finished, please save the forms to your device and upload to your profile at <a href="https://immstar.immtracker.com/portal/Login/tabid/314/Default.aspx" target="_blank">ImmSTAR.com</a>. Here is your completed EB1C QR for your immediate reference.
+															A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Please click to download the form.
+																Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1): Thank you, once you upload your documents, someone from the team will reach out to you.
+
+
+														A: No
+															Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2): Ok, please come back when you are ready to move forward. 
+	
+									
+													A: No
+														Q(4.1.1.1.1.1.1.1.1.1.1.1.1.1.2):GOTO:4.1.1.1.1.1.1.1.1.1.1.1.1
+												A: Yes
+													Q(4.1.1.1.1.1.1.1.1.1.1.1.1.2):GOTO:4.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+										A:No
+											Q(4.1.1.1.1.1.1.1.1.1.1.2):GOTO:4.1.1.1.1.1.1.2
+									A: No
+										Q(4.1.1.1.1.1.1.1.1.1.2):GOTO:4.1.1.1.1.1.1.2
+							A: No
+								Q(4.1.1.1.1.1.1.1.2):GOTO:4.1.1.1.1.1.1.2
+								
+													
+					
+
+						A: No
+							Q(4.1.1.1.1.1.1.2): I’m sorry, you do not qualify.
+					A: No
+						Q(4.1.1.1.1.1.2): I’m sorry, you do not qualify.
+				A: No.
+					Q(4.1.1.1.1.2): I’m sorry, you do not qualify.
+			A: No
+				Q(4.1.1.1.2): I’m sorry, you do not qualify.
+		A: No
+			Q(4.1.1.2): I’m sorry, you do not qualify.
+	A: No
+		Q(4.1.2): I’m sorry, you do not qualify.
+
+A: No
+	Q(4.2): Unfortunately, you do not qualify at this time. If you are promoted, at that point, you may reassess your qualifications.

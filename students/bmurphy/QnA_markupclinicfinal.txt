@@ -1,0 +1,253 @@
+Title: Housing Discrimination Intake Sheet
+Author: Student
+Description: Intake Information
+Before:
+<input type="hidden" name="document_key" value="1NtwjNfzTwF95wswrUWWlV1r5Ue2sT_e8ld-_DnA5oN4"/>
+<input type="hidden" name="sheet_name" value="Sheet1"/>
+<input type="hidden" name="reply" value=""/>
+<input type="hidden" name="redirect" value=""/>
+
+
+Q(1): Date of Intake (MM/DD/YYYY)
+X:
+	Q(1.1):GOTO:intake
+Q(intake): Intake Person
+X:
+	Q(2.1):GOTO:clientname
+Q(clientname): Client's Name
+X:
+	Q(3.1):GOTO:city
+Q(city): Client's City
+X:
+	Q(4.1):GOTO:address
+Q(address): Client's Street Address
+X:
+	Q(5.1):GOTO:zip
+Q(zip): Client's Zip Code
+X:
+	Q(6.1):GOTO:state
+Q(state):Client's State
+X:
+	Q(7.1):GOTO:phonehome
+Q(phonehome): Client's Home Phone Number
+X:
+	Q(8.1):GOTO:phonecell
+Q(phonecell): Client's Cell Phone Number
+X:
+	Q(9.1):GOTO:email
+Q(email): Client's Email
+X:
+	Q(10.1):GOTO:work
+Q(work): Client's Work/Job Description
+X:
+	Q(11.1):GOTO:altcontact
+Q(altcontact): Alternative Contact Person
+X:
+	Q(12.1):GOTO:relationshipcontact
+Q(relationshipcontact): Relationship to Contact Person
+X:
+	Q(13.1):GOTO:altphone
+Q(altphone): Alternate Phone Number
+X:
+	Q(14.1):GOTO:dob
+Q(dob): Client's Date of Birth (MM/DD/YYYY)
+X:
+	Q(15.1):GOTO:age
+Q(age): Client's Age
+X:
+	Q(16.1):GOTO:race
+Q(race): Client's Race
+X:
+	Q(17.1):GOTO:ethnicity
+Q(ethnicity): Client's Ethnicity/National Origin 
+X:
+	Q(18.1):GOTO:number
+Q(number): Number of People in Household
+X:
+	Q(19.1):GOTO:represent
+Q(represent): Have we ever represented you or a household member before? (Y/N)
+X:
+	Q(20.1):GOTO:children
+Q(children): How many children under 18 years old? (N/A if None)
+X:
+	Q(21.1):GOTO:childage
+Q(childage): What are the ages of the client's children?
+X:
+	Q(22.1):GOTO:gender
+Q(gender): What is the client's assigned gender?
+X:
+	Q(23.1):GOTO:genderexp
+Q(genderexp): Gender Expression
+X:
+	Q(24.1):GOTO:genderleg
+Q(genderleg): Legal Gender
+X:
+	Q(25.1):GOTO:sexualorient
+Q(sexualorient): Sexual Orientation (Straight; Etc.)
+X:
+	Q(26.1):GOTO:color
+Q(color): Color (based on skin color)
+X:
+	Q(27.1):GOTO:immigration
+Q(immigration): Immigration Status (Citizen, Etc.)
+X:
+	Q(28.1):GOTO:marriage
+Q(marriage): Marital Status
+X:
+	Q(29.1):GOTO:disability 
+Q(disability): Does the client have a disability?
+X:
+	Q(30.1):GOTO:pubrent
+Q(pubrent): Public or Rental Assistance
+X:
+	Q(31.1):GOTO:veteran
+Q(veteran): Military/Veteran Status
+X:
+	Q(32.1):GOTO:religion
+Q(religion): Client's Religion
+X:
+	Q(33.1):GOTO:language
+Q(language): Client's Language
+X:
+	Q(34.1):GOTO:income
+Q(income): Total Household Income:
+X:
+	Q(35.1):GOTO:memberincome
+Q(memberincome): Household member name and income. For income, please list in order (1) source; (2) amount, and (3) frequency - weekly/monthly/yearly.
+X:
+	Q(36.1):GOTO:voucher
+Q(voucher): Do you have a housing voucher?
+A: Yes
+	Q(37.1):GOTO:agency
+A: No
+	Q(37.2):GOTO:property
+Q(agency): What agency issued the voucher?
+X:
+	Q(38.1):GOTO:type
+Q(type): What Type?
+X:
+	Q(39.1):GOTO:whenissued
+Q(whenissued): When did you get it?
+X:
+	Q(40.1):GOTO:worth
+Q(worth): How much is the voucher worth?
+X:
+	Q(41.1):GOTO:rentshare
+Q(rentshare): How much is your share of the rent (% or actual amount paid)?
+X:
+	Q(42.1):GOTO:expire
+Q(expire): When does it expire?
+X:
+	Q(43.1):GOTO:property
+Q(property): What type of property is at issue?
+A: Single Family
+	Q(44.1):GOTO:owner
+A: Duplex (2 Units)
+	Q(44.2):GOTO:owner
+A: 3-4 Unit Building ("Triple Decker")
+	Q(44.3):GOTO:owner
+A: Condominium
+	Q(44.4):GOTO:rate
+A: Mobile Home
+	Q(44.5):GOTO:rate
+A: Apartment Complex
+	Q(44.6):GOTO:unitsinapartment
+A:Other, Please Specify
+	Q(44.7):GOTO:specify
+Q(unitsinapartment): How many units are estimated in the complex?
+X:
+	Q(45.1):GOTO:owner
+Q(owner): Does the owner live in one of the units? (Y/N)
+X:
+	Q(46.1):GOTO:rate
+Q(specify): Specify other property type
+X:
+	Q(47.1):GOTO:rate
+Q(rate): What is the rental price of the unit? Is there any other market information about the price?
+X:
+	Q(48.1):GOTO:units
+Q(units): Number of Units in the Building
+X:
+	Q(49.1):GOTO:buildings
+Q(buildings): Number of Buildings in the complex
+X:
+	Q(50.1):GOTO:bedrooms
+Q(bedrooms): Number of Bedrooms in Unit at Issue
+X:
+	Q(51.1):GOTO:unitaddress
+Q(unitaddress): Address of Unit/Apartment at Issue
+X:
+	Q(52.1):GOTO:listedrent
+Q(listedrent): Rental Price Listed in Advertisement
+X:
+	Q(53.1):GOTO:housingtransaction
+Q(housingtransaction): Identify the type of housing transaction that you are concerned about
+A:Rental
+	Q(54.1):GOTO:whenoccured
+A:Sale
+	Q(54.2):GOTO:whenoccured
+A:Advertisement
+	Q(54.3):GOTO:whenoccured
+A: Lending/Insurance
+	Q(54.4):GOTO:whenoccured
+A: Eviction
+	Q(54.5):GOTO:evictioncourt
+Q(evictioncourt): Please enter Court Location/Date of Notice to Quit/Date of Summons
+X:
+	Q(55.1):GOTO:evictionanswer
+Q(evictionanswer): Have you provided an Answer?
+A: Yes
+	Q(56.1):GOTO:representedlandlord
+A: No
+	Q(56.2):GOTO:representedlandlord
+Q(representedlandlord): Is the landlord represented? If yes, who is the landlord's attorney?
+X:
+	Q(57.1):GOTO:whenoccured
+Q(whenoccured): When did the discrimination occur? (List all dates)
+X:
+	Q(58.1):GOTO:listinginfo
+Q(listinginfo): If there was an advertisement, please list real estate service (Zillow, Trulia, Etc.) and Ad or Listing # if available
+X:
+	Q(59.1):GOTO:housingagent
+Q(housingagent): Please enter realtor or agent name/contact information if available
+X:
+	Q(60.1):GOTO:estatecompany
+Q(estatecompany): Please enter real estate company/contact information if available
+X:
+	Q(61.1):GOTO:landlordname
+Q(landlordname): Please enter landlord/owner name/contact information if available
+X:
+	Q(62.1):GOTO:managementname
+Q(managementname): Management Company name/contact information if available
+X:
+	Q(63.1):GOTO:otherprovider
+Q(otherprovider): Other provider/contact information if available
+X:
+	Q(64.1):GOTO:briefdescription
+Q(briefdescription): Briefly describe the alleged discriminatory act that occurred
+X:
+	Q(65.1):GOTO:howdidyou
+Q(howdidyou): How did you hear about us?
+A:Newspaper
+	Q(66.1):GOTO:theend
+A: Internet/Website
+	Q(66.2):GOTO:theend
+A: Someone assisting you with housing search
+	Q(66.3):GOTO:theend
+A: Friend/Coworker
+	Q(66.4):GOTO:theend
+A: Advertisement
+	Q(66.5):GOTO:theend
+A: Social worker/Service provider
+	Q(66.6):GOTO:theend
+A: A Fair Housing Agency
+	Q(66.7):GOTO:theend
+A: Legal Aid Agency
+	Q(66.8):GOTO:theend
+A: Other
+	Q(66.9):GOTO:theend
+Q(theend): Ready to send in your data?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_str','_blank')] Yes
+	Q(67.1): Thank you
+A: No
+	Q(67.2): Have a nice day. Come back soon. 

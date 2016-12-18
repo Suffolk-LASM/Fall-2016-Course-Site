@@ -1,0 +1,1320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<HEAD>
+	<title>Housing Discrimination Intake Sheet</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Housing Discrimination Intake Sheet"/>
+	<meta property="og:description" content="Intake Information"/>
+	<meta property="og:image" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"><style>	
+	body {
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	}
+
+	#rawmarkup{
+		display:none;
+	}
+	
+	#QandA img{
+		width:100%;
+	}
+
+	div.main{
+		min-width:300px;
+		max-width:650px;
+		margin: 0 auto;
+	padding:0 5px 0 5px;
+		}
+	div.frame{
+		float:left;
+		width:100%;
+		margin:5px 0 5px 0;
+	}
+	div.full{
+		float:left;
+		width:100%;
+	}
+	.button{
+		padding:8px;
+		margin:8px 0 0px 0;
+		width:100%;
+	}
+	div.question_text{
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#ffffff;
+		min-width:30px;
+		background:#5489eb;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-right:45px;
+	}
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
+
+	div.question_arrow{
+		float:left; 
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent; 
+		border-right: 10px solid transparent; 
+		border-top: 15px solid #5489eb;
+		margin:0 20px;
+	}
+	div.ans_text{
+		float:right;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#000000;
+		min-width:30px;
+		background:#eeeeee;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-left:45px;
+	}
+	div.ans_arrow{
+		float:right; 
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent; 
+		border-right: 5px solid transparent; 
+		border-top: 15px solid #eeeeee;
+		margin:0 20px;
+	}
+	div.choices{
+		float:left;
+		width:100%;
+		margin:15px 0 0 0;
+	}
+	div.standard_buttons{
+		float:left;
+		width:100%;
+		margin-top:5px;
+		border-top: 1px solid #ddd; 
+		padding-top:12px;		
+	}
+	div.credits{
+		float:left;
+		dispaly:none;
+		width:100%;
+		background:#eee;
+		margin:0px 0 15px 0;
+	}
+	div.credit_text{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		padding:4px 15px 10px 15px;
+	}
+	li.error{
+		list-style-type: none;
+		background:#ffdddd;
+		margin: 10px 0 0 0;
+		padding: 5px;
+	}
+
+	.qpad {
+		float:left;
+		padding:0 15px;
+	}
+	
+	a.sbutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.sbutton:hover, a.sbutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton:hover, a.qabutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+
+	div.xdiv {
+		float:left;
+		width:100%;
+		margin: 0 0 8px 0;
+		background: #eee;
+		border: solid 1px #888;
+		border-radius: 8px;
+	}	
+
+	input.xinput {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		float:left;
+		width:100%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #fff;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding:10px 10px 12px 10px;
+		border: solid 0px #888;
+		border-bottom: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton {
+		float:left;
+		width:100%;
+		text-align:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0px;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton:hover, a.xbutton:active {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		background: #ddd;
+	}
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px">
+<input type="hidden" name="document_key" value="1NtwjNfzTwF95wswrUWWlV1r5Ue2sT_e8ld-_DnA5oN4"/>
+<input type="hidden" name="sheet_name" value="Sheet1"/>
+<input type="hidden" name="reply" value=""/>
+<input type="hidden" name="redirect" value=""/>
+
+
+<div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Title: Housing Discrimination Intake Sheet
+Author: Student
+Description: Intake Information
+Before:
+<input type="hidden" name="document_key" value="1NtwjNfzTwF95wswrUWWlV1r5Ue2sT_e8ld-_DnA5oN4"/>
+<input type="hidden" name="sheet_name" value="Sheet1"/>
+<input type="hidden" name="reply" value=""/>
+<input type="hidden" name="redirect" value=""/>
+
+
+Q(1): Date of Intake (MM/DD/YYYY)
+X:
+	Q(1.1):GOTO:intake
+Q(intake): Intake Person
+X:
+	Q(2.1):GOTO:clientname
+Q(clientname): Client's Name
+X:
+	Q(3.1):GOTO:city
+Q(city): Client's City
+X:
+	Q(4.1):GOTO:address
+Q(address): Client's Street Address
+X:
+	Q(5.1):GOTO:zip
+Q(zip): Client's Zip Code
+X:
+	Q(6.1):GOTO:state
+Q(state):Client's State
+X:
+	Q(7.1):GOTO:phonehome
+Q(phonehome): Client's Home Phone Number
+X:
+	Q(8.1):GOTO:phonecell
+Q(phonecell): Client's Cell Phone Number
+X:
+	Q(9.1):GOTO:email
+Q(email): Client's Email
+X:
+	Q(10.1):GOTO:work
+Q(work): Client's Work/Job Description
+X:
+	Q(11.1):GOTO:altcontact
+Q(altcontact): Alternative Contact Person
+X:
+	Q(12.1):GOTO:relationshipcontact
+Q(relationshipcontact): Relationship to Contact Person
+X:
+	Q(13.1):GOTO:altphone
+Q(altphone): Alternate Phone Number
+X:
+	Q(14.1):GOTO:dob
+Q(dob): Client's Date of Birth (MM/DD/YYYY)
+X:
+	Q(15.1):GOTO:age
+Q(age): Client's Age
+X:
+	Q(16.1):GOTO:race
+Q(race): Client's Race
+X:
+	Q(17.1):GOTO:ethnicity
+Q(ethnicity): Client's Ethnicity/National Origin 
+X:
+	Q(18.1):GOTO:number
+Q(number): Number of People in Household
+X:
+	Q(19.1):GOTO:represent
+Q(represent): Have we ever represented you or a household member before? (Y/N)
+X:
+	Q(20.1):GOTO:children
+Q(children): How many children under 18 years old? (N/A if None)
+X:
+	Q(21.1):GOTO:childage
+Q(childage): What are the ages of the client's children?
+X:
+	Q(22.1):GOTO:gender
+Q(gender): What is the client's assigned gender?
+X:
+	Q(23.1):GOTO:genderexp
+Q(genderexp): Gender Expression
+X:
+	Q(24.1):GOTO:genderleg
+Q(genderleg): Legal Gender
+X:
+	Q(25.1):GOTO:sexualorient
+Q(sexualorient): Sexual Orientation (Straight; Etc.)
+X:
+	Q(26.1):GOTO:color
+Q(color): Color (based on skin color)
+X:
+	Q(27.1):GOTO:immigration
+Q(immigration): Immigration Status (Citizen, Etc.)
+X:
+	Q(28.1):GOTO:marriage
+Q(marriage): Marital Status
+X:
+	Q(29.1):GOTO:disability 
+Q(disability): Does the client have a disability?
+X:
+	Q(30.1):GOTO:pubrent
+Q(pubrent): Public or Rental Assistance
+X:
+	Q(31.1):GOTO:veteran
+Q(veteran): Military/Veteran Status
+X:
+	Q(32.1):GOTO:religion
+Q(religion): Client's Religion
+X:
+	Q(33.1):GOTO:language
+Q(language): Client's Language
+X:
+	Q(34.1):GOTO:income
+Q(income): Total Household Income:
+X:
+	Q(35.1):GOTO:memberincome
+Q(memberincome): Household member name and income. For income, please list in order (1) source; (2) amount, and (3) frequency - weekly/monthly/yearly.
+X:
+	Q(36.1):GOTO:voucher
+Q(voucher): Do you have a housing voucher?
+A: Yes
+	Q(37.1):GOTO:agency
+A: No
+	Q(37.2):GOTO:property
+Q(agency): What agency issued the voucher?
+X:
+	Q(38.1):GOTO:type
+Q(type): What Type?
+X:
+	Q(39.1):GOTO:whenissued
+Q(whenissued): When did you get it?
+X:
+	Q(40.1):GOTO:worth
+Q(worth): How much is the voucher worth?
+X:
+	Q(41.1):GOTO:rentshare
+Q(rentshare): How much is your share of the rent (% or actual amount paid)?
+X:
+	Q(42.1):GOTO:expire
+Q(expire): When does it expire?
+X:
+	Q(43.1):GOTO:property
+Q(property): What type of property is at issue?
+A: Single Family
+	Q(44.1):GOTO:owner
+A: Duplex (2 Units)
+	Q(44.2):GOTO:owner
+A: 3-4 Unit Building ("Triple Decker")
+	Q(44.3):GOTO:owner
+A: Condominium
+	Q(44.4):GOTO:rate
+A: Mobile Home
+	Q(44.5):GOTO:rate
+A: Apartment Complex
+	Q(44.6):GOTO:unitsinapartment
+A:Other, Please Specify
+	Q(44.7):GOTO:specify
+Q(unitsinapartment): How many units are estimated in the complex?
+X:
+	Q(45.1):GOTO:owner
+Q(owner): Does the owner live in one of the units? (Y/N)
+X:
+	Q(46.1):GOTO:rate
+Q(specify): Specify other property type
+X:
+	Q(47.1):GOTO:rate
+Q(rate): What is the rental price of the unit? Is there any other market information about the price?
+X:
+	Q(48.1):GOTO:units
+Q(units): Number of Units in the Building
+X:
+	Q(49.1):GOTO:buildings
+Q(buildings): Number of Buildings in the complex
+X:
+	Q(50.1):GOTO:bedrooms
+Q(bedrooms): Number of Bedrooms in Unit at Issue
+X:
+	Q(51.1):GOTO:unitaddress
+Q(unitaddress): Address of Unit/Apartment at Issue
+X:
+	Q(52.1):GOTO:listedrent
+Q(listedrent): Rental Price Listed in Advertisement
+X:
+	Q(53.1):GOTO:housingtransaction
+Q(housingtransaction): Identify the type of housing transaction that you are concerned about
+A:Rental
+	Q(54.1):GOTO:whenoccured
+A:Sale
+	Q(54.2):GOTO:whenoccured
+A:Advertisement
+	Q(54.3):GOTO:whenoccured
+A: Lending/Insurance
+	Q(54.4):GOTO:whenoccured
+A: Eviction
+	Q(54.5):GOTO:evictioncourt
+Q(evictioncourt): Please enter Court Location/Date of Notice to Quit/Date of Summons
+X:
+	Q(55.1):GOTO:evictionanswer
+Q(evictionanswer): Have you provided an Answer?
+A: Yes
+	Q(56.1):GOTO:representedlandlord
+A: No
+	Q(56.2):GOTO:representedlandlord
+Q(representedlandlord): Is the landlord represented? If yes, who is the landlord's attorney?
+X:
+	Q(57.1):GOTO:whenoccured
+Q(whenoccured): When did the discrimination occur? (List all dates)
+X:
+	Q(58.1):GOTO:listinginfo
+Q(listinginfo): If there was an advertisement, please list real estate service (Zillow, Trulia, Etc.) and Ad or Listing # if available
+X:
+	Q(59.1):GOTO:housingagent
+Q(housingagent): Please enter realtor or agent name/contact information if available
+X:
+	Q(60.1):GOTO:estatecompany
+Q(estatecompany): Please enter real estate company/contact information if available
+X:
+	Q(61.1):GOTO:landlordname
+Q(landlordname): Please enter landlord/owner name/contact information if available
+X:
+	Q(62.1):GOTO:managementname
+Q(managementname): Management Company name/contact information if available
+X:
+	Q(63.1):GOTO:otherprovider
+Q(otherprovider): Other provider/contact information if available
+X:
+	Q(64.1):GOTO:briefdescription
+Q(briefdescription): Briefly describe the alleged discriminatory act that occurred
+X:
+	Q(65.1):GOTO:howdidyou
+Q(howdidyou): How did you hear about us?
+A:Newspaper
+	Q(66.1):GOTO:theend
+A: Internet/Website
+	Q(66.2):GOTO:theend
+A: Someone assisting you with housing search
+	Q(66.3):GOTO:theend
+A: Friend/Coworker
+	Q(66.4):GOTO:theend
+A: Advertisement
+	Q(66.5):GOTO:theend
+A: Social worker/Service provider
+	Q(66.6):GOTO:theend
+A: A Fair Housing Agency
+	Q(66.7):GOTO:theend
+A: Legal Aid Agency
+	Q(66.8):GOTO:theend
+A: Other
+	Q(66.9):GOTO:theend
+Q(theend): Ready to send in your data?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_str','_blank')] Yes
+	Q(67.1): Thank you
+A: No
+	Q(67.2): Have a nice day. Come back soon. </div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'> Date of Intake (MM/DD/YYYY)
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-2' name='Q-2' style='display:none;'> Intake Person
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Client's Name
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'> Client's City
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Client's Street Address
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> Client's Zip Code
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'>Client's State
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-8' name='Q-8' style='display:none;'> Client's Home Phone Number
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'> Client's Cell Phone Number
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> Client's Email
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> Client's Work/Job Description
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Alternative Contact Person
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> Relationship to Contact Person
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'>GOTO:14</div><div id='Q-14' name='Q-14' style='display:none;'> Alternate Phone Number
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='Q-15' name='Q-15' style='display:none;'> Client's Date of Birth (MM/DD/YYYY)
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'>GOTO:16</div><div id='Q-16' name='Q-16' style='display:none;'> Client's Age
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> Client's Race
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'>GOTO:18</div><div id='Q-18' name='Q-18' style='display:none;'> Client's Ethnicity/National Origin 
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'>GOTO:19</div><div id='Q-19' name='Q-19' style='display:none;'> Number of People in Household
+</div><div id='Q-19.1' name='Q-19.1' style='display:none;'>GOTO:20</div><div id='Q-20' name='Q-20' style='display:none;'> Have we ever represented you or a household member before? (Y/N)
+</div><div id='Q-20.1' name='Q-20.1' style='display:none;'>GOTO:21</div><div id='Q-21' name='Q-21' style='display:none;'> How many children under 18 years old? (N/A if None)
+</div><div id='Q-21.1' name='Q-21.1' style='display:none;'>GOTO:22</div><div id='Q-22' name='Q-22' style='display:none;'> What are the ages of the client's children?
+</div><div id='Q-22.1' name='Q-22.1' style='display:none;'>GOTO:23</div><div id='Q-23' name='Q-23' style='display:none;'> What is the client's assigned gender?
+</div><div id='Q-23.1' name='Q-23.1' style='display:none;'>GOTO:24</div><div id='Q-24' name='Q-24' style='display:none;'> Gender Expression
+</div><div id='Q-24.1' name='Q-24.1' style='display:none;'>GOTO:25</div><div id='Q-25' name='Q-25' style='display:none;'> Legal Gender
+</div><div id='Q-25.1' name='Q-25.1' style='display:none;'>GOTO:26</div><div id='Q-26' name='Q-26' style='display:none;'> Sexual Orientation (Straight; Etc.)
+</div><div id='Q-26.1' name='Q-26.1' style='display:none;'>GOTO:27</div><div id='Q-27' name='Q-27' style='display:none;'> Color (based on skin color)
+</div><div id='Q-27.1' name='Q-27.1' style='display:none;'>GOTO:28</div><div id='Q-28' name='Q-28' style='display:none;'> Immigration Status (Citizen, Etc.)
+</div><div id='Q-28.1' name='Q-28.1' style='display:none;'>GOTO:29</div><div id='Q-29' name='Q-29' style='display:none;'> Marital Status
+</div><div id='Q-29.1' name='Q-29.1' style='display:none;'>GOTO:30</div><div id='Q-30' name='Q-30' style='display:none;'> Does the client have a disability?
+</div><div id='Q-30.1' name='Q-30.1' style='display:none;'>GOTO:31</div><div id='Q-31' name='Q-31' style='display:none;'> Public or Rental Assistance
+</div><div id='Q-31.1' name='Q-31.1' style='display:none;'>GOTO:32</div><div id='Q-32' name='Q-32' style='display:none;'> Military/Veteran Status
+</div><div id='Q-32.1' name='Q-32.1' style='display:none;'>GOTO:33</div><div id='Q-33' name='Q-33' style='display:none;'> Client's Religion
+</div><div id='Q-33.1' name='Q-33.1' style='display:none;'>GOTO:34</div><div id='Q-34' name='Q-34' style='display:none;'> Client's Language
+</div><div id='Q-34.1' name='Q-34.1' style='display:none;'>GOTO:35</div><div id='Q-35' name='Q-35' style='display:none;'> Total Household Income:
+</div><div id='Q-35.1' name='Q-35.1' style='display:none;'>GOTO:36</div><div id='Q-36' name='Q-36' style='display:none;'> Household member name and income. For income, please list in order (1) source; (2) amount, and (3) frequency - weekly/monthly/yearly.
+</div><div id='Q-36.1' name='Q-36.1' style='display:none;'>GOTO:37</div><div id='Q-37' name='Q-37' style='display:none;'> Do you have a housing voucher?
+</div><div id='Q-37.1' name='Q-37.1' style='display:none;'>GOTO:38</div><div id='Q-37.2' name='Q-37.2' style='display:none;'>GOTO:44</div><div id='Q-38' name='Q-38' style='display:none;'> What agency issued the voucher?
+</div><div id='Q-38.1' name='Q-38.1' style='display:none;'>GOTO:39</div><div id='Q-39' name='Q-39' style='display:none;'> What Type?
+</div><div id='Q-39.1' name='Q-39.1' style='display:none;'>GOTO:40</div><div id='Q-40' name='Q-40' style='display:none;'> When did you get it?
+</div><div id='Q-40.1' name='Q-40.1' style='display:none;'>GOTO:41</div><div id='Q-41' name='Q-41' style='display:none;'> How much is the voucher worth?
+</div><div id='Q-41.1' name='Q-41.1' style='display:none;'>GOTO:42</div><div id='Q-42' name='Q-42' style='display:none;'> How much is your share of the rent (% or actual amount paid)?
+</div><div id='Q-42.1' name='Q-42.1' style='display:none;'>GOTO:43</div><div id='Q-43' name='Q-43' style='display:none;'> When does it expire?
+</div><div id='Q-43.1' name='Q-43.1' style='display:none;'>GOTO:44</div><div id='Q-44' name='Q-44' style='display:none;'> What type of property is at issue?
+</div><div id='Q-44.1' name='Q-44.1' style='display:none;'>GOTO:46</div><div id='Q-44.2' name='Q-44.2' style='display:none;'>GOTO:46</div><div id='Q-44.3' name='Q-44.3' style='display:none;'>GOTO:46</div><div id='Q-44.4' name='Q-44.4' style='display:none;'>GOTO:48</div><div id='Q-44.5' name='Q-44.5' style='display:none;'>GOTO:48</div><div id='Q-44.6' name='Q-44.6' style='display:none;'>GOTO:45</div><div id='Q-44.7' name='Q-44.7' style='display:none;'>GOTO:47</div><div id='Q-45' name='Q-45' style='display:none;'> How many units are estimated in the complex?
+</div><div id='Q-45.1' name='Q-45.1' style='display:none;'>GOTO:46</div><div id='Q-46' name='Q-46' style='display:none;'> Does the owner live in one of the units? (Y/N)
+</div><div id='Q-46.1' name='Q-46.1' style='display:none;'>GOTO:48</div><div id='Q-47' name='Q-47' style='display:none;'> Specify other property type
+</div><div id='Q-47.1' name='Q-47.1' style='display:none;'>GOTO:48</div><div id='Q-48' name='Q-48' style='display:none;'> What is the rental price of the unit? Is there any other market information about the price?
+</div><div id='Q-48.1' name='Q-48.1' style='display:none;'>GOTO:49</div><div id='Q-49' name='Q-49' style='display:none;'> Number of Units in the Building
+</div><div id='Q-49.1' name='Q-49.1' style='display:none;'>GOTO:50</div><div id='Q-50' name='Q-50' style='display:none;'> Number of Buildings in the complex
+</div><div id='Q-50.1' name='Q-50.1' style='display:none;'>GOTO:51</div><div id='Q-51' name='Q-51' style='display:none;'> Number of Bedrooms in Unit at Issue
+</div><div id='Q-51.1' name='Q-51.1' style='display:none;'>GOTO:52</div><div id='Q-52' name='Q-52' style='display:none;'> Address of Unit/Apartment at Issue
+</div><div id='Q-52.1' name='Q-52.1' style='display:none;'>GOTO:53</div><div id='Q-53' name='Q-53' style='display:none;'> Rental Price Listed in Advertisement
+</div><div id='Q-53.1' name='Q-53.1' style='display:none;'>GOTO:54</div><div id='Q-54' name='Q-54' style='display:none;'> Identify the type of housing transaction that you are concerned about
+</div><div id='Q-54.1' name='Q-54.1' style='display:none;'>GOTO:58</div><div id='Q-54.2' name='Q-54.2' style='display:none;'>GOTO:58</div><div id='Q-54.3' name='Q-54.3' style='display:none;'>GOTO:58</div><div id='Q-54.4' name='Q-54.4' style='display:none;'>GOTO:58</div><div id='Q-54.5' name='Q-54.5' style='display:none;'>GOTO:55</div><div id='Q-55' name='Q-55' style='display:none;'> Please enter Court Location/Date of Notice to Quit/Date of Summons
+</div><div id='Q-55.1' name='Q-55.1' style='display:none;'>GOTO:56</div><div id='Q-56' name='Q-56' style='display:none;'> Have you provided an Answer?
+</div><div id='Q-56.1' name='Q-56.1' style='display:none;'>GOTO:57</div><div id='Q-56.2' name='Q-56.2' style='display:none;'>GOTO:57</div><div id='Q-57' name='Q-57' style='display:none;'> Is the landlord represented? If yes, who is the landlord's attorney?
+</div><div id='Q-57.1' name='Q-57.1' style='display:none;'>GOTO:58</div><div id='Q-58' name='Q-58' style='display:none;'> When did the discrimination occur? (List all dates)
+</div><div id='Q-58.1' name='Q-58.1' style='display:none;'>GOTO:59</div><div id='Q-59' name='Q-59' style='display:none;'> If there was an advertisement, please list real estate service (Zillow, Trulia, Etc.) and Ad or Listing # if available
+</div><div id='Q-59.1' name='Q-59.1' style='display:none;'>GOTO:60</div><div id='Q-60' name='Q-60' style='display:none;'> Please enter realtor or agent name/contact information if available
+</div><div id='Q-60.1' name='Q-60.1' style='display:none;'>GOTO:61</div><div id='Q-61' name='Q-61' style='display:none;'> Please enter real estate company/contact information if available
+</div><div id='Q-61.1' name='Q-61.1' style='display:none;'>GOTO:62</div><div id='Q-62' name='Q-62' style='display:none;'> Please enter landlord/owner name/contact information if available
+</div><div id='Q-62.1' name='Q-62.1' style='display:none;'>GOTO:63</div><div id='Q-63' name='Q-63' style='display:none;'> Management Company name/contact information if available
+</div><div id='Q-63.1' name='Q-63.1' style='display:none;'>GOTO:64</div><div id='Q-64' name='Q-64' style='display:none;'> Other provider/contact information if available
+</div><div id='Q-64.1' name='Q-64.1' style='display:none;'>GOTO:65</div><div id='Q-65' name='Q-65' style='display:none;'> Briefly describe the alleged discriminatory act that occurred
+</div><div id='Q-65.1' name='Q-65.1' style='display:none;'>GOTO:66</div><div id='Q-66' name='Q-66' style='display:none;'> How did you hear about us?
+</div><div id='Q-66.1' name='Q-66.1' style='display:none;'>GOTO:67</div><div id='Q-66.2' name='Q-66.2' style='display:none;'>GOTO:67</div><div id='Q-66.3' name='Q-66.3' style='display:none;'>GOTO:67</div><div id='Q-66.4' name='Q-66.4' style='display:none;'>GOTO:67</div><div id='Q-66.5' name='Q-66.5' style='display:none;'>GOTO:67</div><div id='Q-66.6' name='Q-66.6' style='display:none;'>GOTO:67</div><div id='Q-66.7' name='Q-66.7' style='display:none;'>GOTO:67</div><div id='Q-66.8' name='Q-66.8' style='display:none;'>GOTO:67</div><div id='Q-66.9' name='Q-66.9' style='display:none;'>GOTO:67</div><div id='Q-67' name='Q-67' style='display:none;'> Ready to send in your data?
+</div><div id='Q-67.1' name='Q-67.1' style='display:none;'> Thank you
+</div><div id='Q-67.2' name='Q-67.2' style='display:none;'> Have a nice day. Come back soon. </div><div id='A-1.1' name='A-1.1' style='display:none;'><variable></div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>1.1</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-4.1' name='A-4.1' style='display:none;'><variable></div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>4.1</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-7.1' name='A-7.1' style='display:none;'><variable></div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>7.1</div><div id='A-8.1' name='A-8.1' style='display:none;'><variable></div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>8.1</div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>9.1</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-11.1' name='A-11.1' style='display:none;'><variable></div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>11.1</div><div id='A-12.1' name='A-12.1' style='display:none;'><variable></div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>12.1</div><div id='A-13.1' name='A-13.1' style='display:none;'><variable></div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>13.1</div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>14.1</div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>15.1</div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>16.1</div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>17.1</div><div id='A-18.1' name='A-18.1' style='display:none;'><variable></div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:void('');</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>18.1</div><div id='A-19.1' name='A-19.1' style='display:none;'><variable></div><div id='A-href-19.1' name='A-href-19.1' style='display:none;'>javascript:void('');</div><div id='A-target-19.1' name='A-target-19.1' style='display:none;'></div><div id='X-19.1' name='X-19.1' style='display:none;'>19.1</div><div id='A-20.1' name='A-20.1' style='display:none;'><variable></div><div id='A-href-20.1' name='A-href-20.1' style='display:none;'>javascript:void('');</div><div id='A-target-20.1' name='A-target-20.1' style='display:none;'></div><div id='X-20.1' name='X-20.1' style='display:none;'>20.1</div><div id='A-21.1' name='A-21.1' style='display:none;'><variable></div><div id='A-href-21.1' name='A-href-21.1' style='display:none;'>javascript:void('');</div><div id='A-target-21.1' name='A-target-21.1' style='display:none;'></div><div id='X-21.1' name='X-21.1' style='display:none;'>21.1</div><div id='A-22.1' name='A-22.1' style='display:none;'><variable></div><div id='A-href-22.1' name='A-href-22.1' style='display:none;'>javascript:void('');</div><div id='A-target-22.1' name='A-target-22.1' style='display:none;'></div><div id='X-22.1' name='X-22.1' style='display:none;'>22.1</div><div id='A-23.1' name='A-23.1' style='display:none;'><variable></div><div id='A-href-23.1' name='A-href-23.1' style='display:none;'>javascript:void('');</div><div id='A-target-23.1' name='A-target-23.1' style='display:none;'></div><div id='X-23.1' name='X-23.1' style='display:none;'>23.1</div><div id='A-24.1' name='A-24.1' style='display:none;'><variable></div><div id='A-href-24.1' name='A-href-24.1' style='display:none;'>javascript:void('');</div><div id='A-target-24.1' name='A-target-24.1' style='display:none;'></div><div id='X-24.1' name='X-24.1' style='display:none;'>24.1</div><div id='A-25.1' name='A-25.1' style='display:none;'><variable></div><div id='A-href-25.1' name='A-href-25.1' style='display:none;'>javascript:void('');</div><div id='A-target-25.1' name='A-target-25.1' style='display:none;'></div><div id='X-25.1' name='X-25.1' style='display:none;'>25.1</div><div id='A-26.1' name='A-26.1' style='display:none;'><variable></div><div id='A-href-26.1' name='A-href-26.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.1' name='A-target-26.1' style='display:none;'></div><div id='X-26.1' name='X-26.1' style='display:none;'>26.1</div><div id='A-27.1' name='A-27.1' style='display:none;'><variable></div><div id='A-href-27.1' name='A-href-27.1' style='display:none;'>javascript:void('');</div><div id='A-target-27.1' name='A-target-27.1' style='display:none;'></div><div id='X-27.1' name='X-27.1' style='display:none;'>27.1</div><div id='A-28.1' name='A-28.1' style='display:none;'><variable></div><div id='A-href-28.1' name='A-href-28.1' style='display:none;'>javascript:void('');</div><div id='A-target-28.1' name='A-target-28.1' style='display:none;'></div><div id='X-28.1' name='X-28.1' style='display:none;'>28.1</div><div id='A-29.1' name='A-29.1' style='display:none;'><variable></div><div id='A-href-29.1' name='A-href-29.1' style='display:none;'>javascript:void('');</div><div id='A-target-29.1' name='A-target-29.1' style='display:none;'></div><div id='X-29.1' name='X-29.1' style='display:none;'>29.1</div><div id='A-30.1' name='A-30.1' style='display:none;'><variable></div><div id='A-href-30.1' name='A-href-30.1' style='display:none;'>javascript:void('');</div><div id='A-target-30.1' name='A-target-30.1' style='display:none;'></div><div id='X-30.1' name='X-30.1' style='display:none;'>30.1</div><div id='A-31.1' name='A-31.1' style='display:none;'><variable></div><div id='A-href-31.1' name='A-href-31.1' style='display:none;'>javascript:void('');</div><div id='A-target-31.1' name='A-target-31.1' style='display:none;'></div><div id='X-31.1' name='X-31.1' style='display:none;'>31.1</div><div id='A-32.1' name='A-32.1' style='display:none;'><variable></div><div id='A-href-32.1' name='A-href-32.1' style='display:none;'>javascript:void('');</div><div id='A-target-32.1' name='A-target-32.1' style='display:none;'></div><div id='X-32.1' name='X-32.1' style='display:none;'>32.1</div><div id='A-33.1' name='A-33.1' style='display:none;'><variable></div><div id='A-href-33.1' name='A-href-33.1' style='display:none;'>javascript:void('');</div><div id='A-target-33.1' name='A-target-33.1' style='display:none;'></div><div id='X-33.1' name='X-33.1' style='display:none;'>33.1</div><div id='A-34.1' name='A-34.1' style='display:none;'><variable></div><div id='A-href-34.1' name='A-href-34.1' style='display:none;'>javascript:void('');</div><div id='A-target-34.1' name='A-target-34.1' style='display:none;'></div><div id='X-34.1' name='X-34.1' style='display:none;'>34.1</div><div id='A-35.1' name='A-35.1' style='display:none;'><variable></div><div id='A-href-35.1' name='A-href-35.1' style='display:none;'>javascript:void('');</div><div id='A-target-35.1' name='A-target-35.1' style='display:none;'></div><div id='X-35.1' name='X-35.1' style='display:none;'>35.1</div><div id='A-36.1' name='A-36.1' style='display:none;'><variable></div><div id='A-href-36.1' name='A-href-36.1' style='display:none;'>javascript:void('');</div><div id='A-target-36.1' name='A-target-36.1' style='display:none;'></div><div id='X-36.1' name='X-36.1' style='display:none;'>36.1</div><div id='A-37.1' name='A-37.1' style='display:none;'> Yes
+</div><div id='A-href-37.1' name='A-href-37.1' style='display:none;'>javascript:void('');</div><div id='A-target-37.1' name='A-target-37.1' style='display:none;'></div><div id='X-37.1' name='X-37.1' style='display:none;'>Yes</div><div id='A-37.2' name='A-37.2' style='display:none;'> No
+</div><div id='A-href-37.2' name='A-href-37.2' style='display:none;'>javascript:void('');</div><div id='A-target-37.2' name='A-target-37.2' style='display:none;'></div><div id='X-37.2' name='X-37.2' style='display:none;'>No</div><div id='A-38.1' name='A-38.1' style='display:none;'><variable></div><div id='A-href-38.1' name='A-href-38.1' style='display:none;'>javascript:void('');</div><div id='A-target-38.1' name='A-target-38.1' style='display:none;'></div><div id='X-38.1' name='X-38.1' style='display:none;'>38.1</div><div id='A-39.1' name='A-39.1' style='display:none;'><variable></div><div id='A-href-39.1' name='A-href-39.1' style='display:none;'>javascript:void('');</div><div id='A-target-39.1' name='A-target-39.1' style='display:none;'></div><div id='X-39.1' name='X-39.1' style='display:none;'>39.1</div><div id='A-40.1' name='A-40.1' style='display:none;'><variable></div><div id='A-href-40.1' name='A-href-40.1' style='display:none;'>javascript:void('');</div><div id='A-target-40.1' name='A-target-40.1' style='display:none;'></div><div id='X-40.1' name='X-40.1' style='display:none;'>40.1</div><div id='A-41.1' name='A-41.1' style='display:none;'><variable></div><div id='A-href-41.1' name='A-href-41.1' style='display:none;'>javascript:void('');</div><div id='A-target-41.1' name='A-target-41.1' style='display:none;'></div><div id='X-41.1' name='X-41.1' style='display:none;'>41.1</div><div id='A-42.1' name='A-42.1' style='display:none;'><variable></div><div id='A-href-42.1' name='A-href-42.1' style='display:none;'>javascript:void('');</div><div id='A-target-42.1' name='A-target-42.1' style='display:none;'></div><div id='X-42.1' name='X-42.1' style='display:none;'>42.1</div><div id='A-43.1' name='A-43.1' style='display:none;'><variable></div><div id='A-href-43.1' name='A-href-43.1' style='display:none;'>javascript:void('');</div><div id='A-target-43.1' name='A-target-43.1' style='display:none;'></div><div id='X-43.1' name='X-43.1' style='display:none;'>43.1</div><div id='A-44.1' name='A-44.1' style='display:none;'> Single Family
+</div><div id='A-href-44.1' name='A-href-44.1' style='display:none;'>javascript:void('');</div><div id='A-target-44.1' name='A-target-44.1' style='display:none;'></div><div id='X-44.1' name='X-44.1' style='display:none;'>Single Family</div><div id='A-44.2' name='A-44.2' style='display:none;'> Duplex (2 Units)
+</div><div id='A-href-44.2' name='A-href-44.2' style='display:none;'>javascript:void('');</div><div id='A-target-44.2' name='A-target-44.2' style='display:none;'></div><div id='X-44.2' name='X-44.2' style='display:none;'>Duplex (2 Units)</div><div id='A-44.3' name='A-44.3' style='display:none;'> 3-4 Unit Building ("Triple Decker")
+</div><div id='A-href-44.3' name='A-href-44.3' style='display:none;'>javascript:void('');</div><div id='A-target-44.3' name='A-target-44.3' style='display:none;'></div><div id='X-44.3' name='X-44.3' style='display:none;'>3-4 Unit Building ("Triple Decker")</div><div id='A-44.4' name='A-44.4' style='display:none;'> Condominium
+</div><div id='A-href-44.4' name='A-href-44.4' style='display:none;'>javascript:void('');</div><div id='A-target-44.4' name='A-target-44.4' style='display:none;'></div><div id='X-44.4' name='X-44.4' style='display:none;'>Condominium</div><div id='A-44.5' name='A-44.5' style='display:none;'> Mobile Home
+</div><div id='A-href-44.5' name='A-href-44.5' style='display:none;'>javascript:void('');</div><div id='A-target-44.5' name='A-target-44.5' style='display:none;'></div><div id='X-44.5' name='X-44.5' style='display:none;'>Mobile Home</div><div id='A-44.6' name='A-44.6' style='display:none;'> Apartment Complex
+</div><div id='A-href-44.6' name='A-href-44.6' style='display:none;'>javascript:void('');</div><div id='A-target-44.6' name='A-target-44.6' style='display:none;'></div><div id='X-44.6' name='X-44.6' style='display:none;'>Apartment Complex</div><div id='A-44.7' name='A-44.7' style='display:none;'>Other, Please Specify
+</div><div id='A-href-44.7' name='A-href-44.7' style='display:none;'>javascript:void('');</div><div id='A-target-44.7' name='A-target-44.7' style='display:none;'></div><div id='X-44.7' name='X-44.7' style='display:none;'>Other, Please Specify</div><div id='A-45.1' name='A-45.1' style='display:none;'><variable></div><div id='A-href-45.1' name='A-href-45.1' style='display:none;'>javascript:void('');</div><div id='A-target-45.1' name='A-target-45.1' style='display:none;'></div><div id='X-45.1' name='X-45.1' style='display:none;'>45.1</div><div id='A-46.1' name='A-46.1' style='display:none;'><variable></div><div id='A-href-46.1' name='A-href-46.1' style='display:none;'>javascript:void('');</div><div id='A-target-46.1' name='A-target-46.1' style='display:none;'></div><div id='X-46.1' name='X-46.1' style='display:none;'>46.1</div><div id='A-47.1' name='A-47.1' style='display:none;'><variable></div><div id='A-href-47.1' name='A-href-47.1' style='display:none;'>javascript:void('');</div><div id='A-target-47.1' name='A-target-47.1' style='display:none;'></div><div id='X-47.1' name='X-47.1' style='display:none;'>47.1</div><div id='A-48.1' name='A-48.1' style='display:none;'><variable></div><div id='A-href-48.1' name='A-href-48.1' style='display:none;'>javascript:void('');</div><div id='A-target-48.1' name='A-target-48.1' style='display:none;'></div><div id='X-48.1' name='X-48.1' style='display:none;'>48.1</div><div id='A-49.1' name='A-49.1' style='display:none;'><variable></div><div id='A-href-49.1' name='A-href-49.1' style='display:none;'>javascript:void('');</div><div id='A-target-49.1' name='A-target-49.1' style='display:none;'></div><div id='X-49.1' name='X-49.1' style='display:none;'>49.1</div><div id='A-50.1' name='A-50.1' style='display:none;'><variable></div><div id='A-href-50.1' name='A-href-50.1' style='display:none;'>javascript:void('');</div><div id='A-target-50.1' name='A-target-50.1' style='display:none;'></div><div id='X-50.1' name='X-50.1' style='display:none;'>50.1</div><div id='A-51.1' name='A-51.1' style='display:none;'><variable></div><div id='A-href-51.1' name='A-href-51.1' style='display:none;'>javascript:void('');</div><div id='A-target-51.1' name='A-target-51.1' style='display:none;'></div><div id='X-51.1' name='X-51.1' style='display:none;'>51.1</div><div id='A-52.1' name='A-52.1' style='display:none;'><variable></div><div id='A-href-52.1' name='A-href-52.1' style='display:none;'>javascript:void('');</div><div id='A-target-52.1' name='A-target-52.1' style='display:none;'></div><div id='X-52.1' name='X-52.1' style='display:none;'>52.1</div><div id='A-53.1' name='A-53.1' style='display:none;'><variable></div><div id='A-href-53.1' name='A-href-53.1' style='display:none;'>javascript:void('');</div><div id='A-target-53.1' name='A-target-53.1' style='display:none;'></div><div id='X-53.1' name='X-53.1' style='display:none;'>53.1</div><div id='A-54.1' name='A-54.1' style='display:none;'>Rental
+</div><div id='A-href-54.1' name='A-href-54.1' style='display:none;'>javascript:void('');</div><div id='A-target-54.1' name='A-target-54.1' style='display:none;'></div><div id='X-54.1' name='X-54.1' style='display:none;'>Rental</div><div id='A-54.2' name='A-54.2' style='display:none;'>Sale
+</div><div id='A-href-54.2' name='A-href-54.2' style='display:none;'>javascript:void('');</div><div id='A-target-54.2' name='A-target-54.2' style='display:none;'></div><div id='X-54.2' name='X-54.2' style='display:none;'>Sale</div><div id='A-54.3' name='A-54.3' style='display:none;'>Advertisement
+</div><div id='A-href-54.3' name='A-href-54.3' style='display:none;'>javascript:void('');</div><div id='A-target-54.3' name='A-target-54.3' style='display:none;'></div><div id='X-54.3' name='X-54.3' style='display:none;'>Advertisement</div><div id='A-54.4' name='A-54.4' style='display:none;'> Lending/Insurance
+</div><div id='A-href-54.4' name='A-href-54.4' style='display:none;'>javascript:void('');</div><div id='A-target-54.4' name='A-target-54.4' style='display:none;'></div><div id='X-54.4' name='X-54.4' style='display:none;'>Lending/Insurance</div><div id='A-54.5' name='A-54.5' style='display:none;'> Eviction
+</div><div id='A-href-54.5' name='A-href-54.5' style='display:none;'>javascript:void('');</div><div id='A-target-54.5' name='A-target-54.5' style='display:none;'></div><div id='X-54.5' name='X-54.5' style='display:none;'>Eviction</div><div id='A-55.1' name='A-55.1' style='display:none;'><variable></div><div id='A-href-55.1' name='A-href-55.1' style='display:none;'>javascript:void('');</div><div id='A-target-55.1' name='A-target-55.1' style='display:none;'></div><div id='X-55.1' name='X-55.1' style='display:none;'>55.1</div><div id='A-56.1' name='A-56.1' style='display:none;'> Yes
+</div><div id='A-href-56.1' name='A-href-56.1' style='display:none;'>javascript:void('');</div><div id='A-target-56.1' name='A-target-56.1' style='display:none;'></div><div id='X-56.1' name='X-56.1' style='display:none;'>Yes</div><div id='A-56.2' name='A-56.2' style='display:none;'> No
+</div><div id='A-href-56.2' name='A-href-56.2' style='display:none;'>javascript:void('');</div><div id='A-target-56.2' name='A-target-56.2' style='display:none;'></div><div id='X-56.2' name='X-56.2' style='display:none;'>No</div><div id='A-57.1' name='A-57.1' style='display:none;'><variable></div><div id='A-href-57.1' name='A-href-57.1' style='display:none;'>javascript:void('');</div><div id='A-target-57.1' name='A-target-57.1' style='display:none;'></div><div id='X-57.1' name='X-57.1' style='display:none;'>57.1</div><div id='A-58.1' name='A-58.1' style='display:none;'><variable></div><div id='A-href-58.1' name='A-href-58.1' style='display:none;'>javascript:void('');</div><div id='A-target-58.1' name='A-target-58.1' style='display:none;'></div><div id='X-58.1' name='X-58.1' style='display:none;'>58.1</div><div id='A-59.1' name='A-59.1' style='display:none;'><variable></div><div id='A-href-59.1' name='A-href-59.1' style='display:none;'>javascript:void('');</div><div id='A-target-59.1' name='A-target-59.1' style='display:none;'></div><div id='X-59.1' name='X-59.1' style='display:none;'>59.1</div><div id='A-60.1' name='A-60.1' style='display:none;'><variable></div><div id='A-href-60.1' name='A-href-60.1' style='display:none;'>javascript:void('');</div><div id='A-target-60.1' name='A-target-60.1' style='display:none;'></div><div id='X-60.1' name='X-60.1' style='display:none;'>60.1</div><div id='A-61.1' name='A-61.1' style='display:none;'><variable></div><div id='A-href-61.1' name='A-href-61.1' style='display:none;'>javascript:void('');</div><div id='A-target-61.1' name='A-target-61.1' style='display:none;'></div><div id='X-61.1' name='X-61.1' style='display:none;'>61.1</div><div id='A-62.1' name='A-62.1' style='display:none;'><variable></div><div id='A-href-62.1' name='A-href-62.1' style='display:none;'>javascript:void('');</div><div id='A-target-62.1' name='A-target-62.1' style='display:none;'></div><div id='X-62.1' name='X-62.1' style='display:none;'>62.1</div><div id='A-63.1' name='A-63.1' style='display:none;'><variable></div><div id='A-href-63.1' name='A-href-63.1' style='display:none;'>javascript:void('');</div><div id='A-target-63.1' name='A-target-63.1' style='display:none;'></div><div id='X-63.1' name='X-63.1' style='display:none;'>63.1</div><div id='A-64.1' name='A-64.1' style='display:none;'><variable></div><div id='A-href-64.1' name='A-href-64.1' style='display:none;'>javascript:void('');</div><div id='A-target-64.1' name='A-target-64.1' style='display:none;'></div><div id='X-64.1' name='X-64.1' style='display:none;'>64.1</div><div id='A-65.1' name='A-65.1' style='display:none;'><variable></div><div id='A-href-65.1' name='A-href-65.1' style='display:none;'>javascript:void('');</div><div id='A-target-65.1' name='A-target-65.1' style='display:none;'></div><div id='X-65.1' name='X-65.1' style='display:none;'>65.1</div><div id='A-66.1' name='A-66.1' style='display:none;'>Newspaper
+</div><div id='A-href-66.1' name='A-href-66.1' style='display:none;'>javascript:void('');</div><div id='A-target-66.1' name='A-target-66.1' style='display:none;'></div><div id='X-66.1' name='X-66.1' style='display:none;'>Newspaper</div><div id='A-66.2' name='A-66.2' style='display:none;'> Internet/Website
+</div><div id='A-href-66.2' name='A-href-66.2' style='display:none;'>javascript:void('');</div><div id='A-target-66.2' name='A-target-66.2' style='display:none;'></div><div id='X-66.2' name='X-66.2' style='display:none;'>Internet/Website</div><div id='A-66.3' name='A-66.3' style='display:none;'> Someone assisting you with housing search
+</div><div id='A-href-66.3' name='A-href-66.3' style='display:none;'>javascript:void('');</div><div id='A-target-66.3' name='A-target-66.3' style='display:none;'></div><div id='X-66.3' name='X-66.3' style='display:none;'>Someone assisting you with housing search</div><div id='A-66.4' name='A-66.4' style='display:none;'> Friend/Coworker
+</div><div id='A-href-66.4' name='A-href-66.4' style='display:none;'>javascript:void('');</div><div id='A-target-66.4' name='A-target-66.4' style='display:none;'></div><div id='X-66.4' name='X-66.4' style='display:none;'>Friend/Coworker</div><div id='A-66.5' name='A-66.5' style='display:none;'> Advertisement
+</div><div id='A-href-66.5' name='A-href-66.5' style='display:none;'>javascript:void('');</div><div id='A-target-66.5' name='A-target-66.5' style='display:none;'></div><div id='X-66.5' name='X-66.5' style='display:none;'>Advertisement</div><div id='A-66.6' name='A-66.6' style='display:none;'> Social worker/Service provider
+</div><div id='A-href-66.6' name='A-href-66.6' style='display:none;'>javascript:void('');</div><div id='A-target-66.6' name='A-target-66.6' style='display:none;'></div><div id='X-66.6' name='X-66.6' style='display:none;'>Social worker/Service provider</div><div id='A-66.7' name='A-66.7' style='display:none;'> A Fair Housing Agency
+</div><div id='A-href-66.7' name='A-href-66.7' style='display:none;'>javascript:void('');</div><div id='A-target-66.7' name='A-target-66.7' style='display:none;'></div><div id='X-66.7' name='X-66.7' style='display:none;'>A Fair Housing Agency</div><div id='A-66.8' name='A-66.8' style='display:none;'> Legal Aid Agency
+</div><div id='A-href-66.8' name='A-href-66.8' style='display:none;'>javascript:void('');</div><div id='A-target-66.8' name='A-target-66.8' style='display:none;'></div><div id='X-66.8' name='X-66.8' style='display:none;'>Legal Aid Agency</div><div id='A-66.9' name='A-66.9' style='display:none;'> Other
+</div><div id='A-href-66.9' name='A-href-66.9' style='display:none;'>javascript:void('');</div><div id='A-target-66.9' name='A-target-66.9' style='display:none;'></div><div id='X-66.9' name='X-66.9' style='display:none;'>Other</div><div id='A-67.1' name='A-67.1' style='display:none;'> Yes
+</div><div id='A-href-67.1' name='A-href-67.1' style='display:none;'>javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_str','_blank')</div><div id='A-target-67.1' name='A-target-67.1' style='display:none;'>target="_blank"</div><div id='X-67.1' name='X-67.1' style='display:none;'>Yes</div><div id='A-67.2' name='A-67.2' style='display:none;'> No
+</div><div id='A-href-67.2' name='A-href-67.2' style='display:none;'>javascript:void('');</div><div id='A-target-67.2' name='A-target-67.2' style='display:none;'></div><div id='X-67.2' name='X-67.2' style='display:none;'>No</div>
+<script>
+	var QVnames = [['1','1'],['1.1','1.1'],['2','intake'],['2.1','2.1'],['3','clientname'],['3.1','3.1'],['4','city'],['4.1','4.1'],['5','address'],['5.1','5.1'],['6','zip'],['6.1','6.1'],['7','state'],['7.1','7.1'],['8','phonehome'],['8.1','8.1'],['9','phonecell'],['9.1','9.1'],['10','email'],['10.1','10.1'],['11','work'],['11.1','11.1'],['12','altcontact'],['12.1','12.1'],['13','relationshipcontact'],['13.1','13.1'],['14','altphone'],['14.1','14.1'],['15','dob'],['15.1','15.1'],['16','age'],['16.1','16.1'],['17','race'],['17.1','17.1'],['18','ethnicity'],['18.1','18.1'],['19','number'],['19.1','19.1'],['20','represent'],['20.1','20.1'],['21','children'],['21.1','21.1'],['22','childage'],['22.1','22.1'],['23','gender'],['23.1','23.1'],['24','genderexp'],['24.1','24.1'],['25','genderleg'],['25.1','25.1'],['26','sexualorient'],['26.1','26.1'],['27','color'],['27.1','27.1'],['28','immigration'],['28.1','28.1'],['29','marriage'],['29.1','29.1'],['30','disability'],['30.1','30.1'],['31','pubrent'],['31.1','31.1'],['32','veteran'],['32.1','32.1'],['33','religion'],['33.1','33.1'],['34','language'],['34.1','34.1'],['35','income'],['35.1','35.1'],['36','memberincome'],['36.1','36.1'],['37','voucher'],['37.1','37.1'],['37.2','37.2'],['38','agency'],['38.1','38.1'],['39','type'],['39.1','39.1'],['40','whenissued'],['40.1','40.1'],['41','worth'],['41.1','41.1'],['42','rentshare'],['42.1','42.1'],['43','expire'],['43.1','43.1'],['44','property'],['44.1','44.1'],['44.2','44.2'],['44.3','44.3'],['44.4','44.4'],['44.5','44.5'],['44.6','44.6'],['44.7','44.7'],['45','unitsinapartment'],['45.1','45.1'],['46','owner'],['46.1','46.1'],['47','specify'],['47.1','47.1'],['48','rate'],['48.1','48.1'],['49','units'],['49.1','49.1'],['50','buildings'],['50.1','50.1'],['51','bedrooms'],['51.1','51.1'],['52','unitaddress'],['52.1','52.1'],['53','listedrent'],['53.1','53.1'],['54','housingtransaction'],['54.1','54.1'],['54.2','54.2'],['54.3','54.3'],['54.4','54.4'],['54.5','54.5'],['55','evictioncourt'],['55.1','55.1'],['56','evictionanswer'],['56.1','56.1'],['56.2','56.2'],['57','representedlandlord'],['57.1','57.1'],['58','whenoccured'],['58.1','58.1'],['59','listinginfo'],['59.1','59.1'],['60','housingagent'],['60.1','60.1'],['61','estatecompany'],['61.1','61.1'],['62','landlordname'],['62.1','62.1'],['63','managementname'],['63.1','63.1'],['64','otherprovider'],['64.1','64.1'],['65','briefdescription'],['65.1','65.1'],['66','howdidyou'],['66.1','66.1'],['66.2','66.2'],['66.3','66.3'],['66.4','66.4'],['66.5','66.5'],['66.6','66.6'],['66.7','66.7'],['66.8','66.8'],['66.9','66.9'],['67','theend'],['67.1','67.1'],['67.2','67.2']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'> Date of Intake (MM/DD/YYYY)
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-2' name='Q-2' style='display:none;'> Intake Person
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Client's Name
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'> Client's City
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Client's Street Address
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> Client's Zip Code
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'>Client's State
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-8' name='Q-8' style='display:none;'> Client's Home Phone Number
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'> Client's Cell Phone Number
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> Client's Email
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> Client's Work/Job Description
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Alternative Contact Person
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> Relationship to Contact Person
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'>GOTO:14</div><div id='Q-14' name='Q-14' style='display:none;'> Alternate Phone Number
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='Q-15' name='Q-15' style='display:none;'> Client's Date of Birth (MM/DD/YYYY)
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'>GOTO:16</div><div id='Q-16' name='Q-16' style='display:none;'> Client's Age
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> Client's Race
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'>GOTO:18</div><div id='Q-18' name='Q-18' style='display:none;'> Client's Ethnicity/National Origin 
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'>GOTO:19</div><div id='Q-19' name='Q-19' style='display:none;'> Number of People in Household
+</div><div id='Q-19.1' name='Q-19.1' style='display:none;'>GOTO:20</div><div id='Q-20' name='Q-20' style='display:none;'> Have we ever represented you or a household member before? (Y/N)
+</div><div id='Q-20.1' name='Q-20.1' style='display:none;'>GOTO:21</div><div id='Q-21' name='Q-21' style='display:none;'> How many children under 18 years old? (N/A if None)
+</div><div id='Q-21.1' name='Q-21.1' style='display:none;'>GOTO:22</div><div id='Q-22' name='Q-22' style='display:none;'> What are the ages of the client's children?
+</div><div id='Q-22.1' name='Q-22.1' style='display:none;'>GOTO:23</div><div id='Q-23' name='Q-23' style='display:none;'> What is the client's assigned gender?
+</div><div id='Q-23.1' name='Q-23.1' style='display:none;'>GOTO:24</div><div id='Q-24' name='Q-24' style='display:none;'> Gender Expression
+</div><div id='Q-24.1' name='Q-24.1' style='display:none;'>GOTO:25</div><div id='Q-25' name='Q-25' style='display:none;'> Legal Gender
+</div><div id='Q-25.1' name='Q-25.1' style='display:none;'>GOTO:26</div><div id='Q-26' name='Q-26' style='display:none;'> Sexual Orientation (Straight; Etc.)
+</div><div id='Q-26.1' name='Q-26.1' style='display:none;'>GOTO:27</div><div id='Q-27' name='Q-27' style='display:none;'> Color (based on skin color)
+</div><div id='Q-27.1' name='Q-27.1' style='display:none;'>GOTO:28</div><div id='Q-28' name='Q-28' style='display:none;'> Immigration Status (Citizen, Etc.)
+</div><div id='Q-28.1' name='Q-28.1' style='display:none;'>GOTO:29</div><div id='Q-29' name='Q-29' style='display:none;'> Marital Status
+</div><div id='Q-29.1' name='Q-29.1' style='display:none;'>GOTO:30</div><div id='Q-30' name='Q-30' style='display:none;'> Does the client have a disability?
+</div><div id='Q-30.1' name='Q-30.1' style='display:none;'>GOTO:31</div><div id='Q-31' name='Q-31' style='display:none;'> Public or Rental Assistance
+</div><div id='Q-31.1' name='Q-31.1' style='display:none;'>GOTO:32</div><div id='Q-32' name='Q-32' style='display:none;'> Military/Veteran Status
+</div><div id='Q-32.1' name='Q-32.1' style='display:none;'>GOTO:33</div><div id='Q-33' name='Q-33' style='display:none;'> Client's Religion
+</div><div id='Q-33.1' name='Q-33.1' style='display:none;'>GOTO:34</div><div id='Q-34' name='Q-34' style='display:none;'> Client's Language
+</div><div id='Q-34.1' name='Q-34.1' style='display:none;'>GOTO:35</div><div id='Q-35' name='Q-35' style='display:none;'> Total Household Income:
+</div><div id='Q-35.1' name='Q-35.1' style='display:none;'>GOTO:36</div><div id='Q-36' name='Q-36' style='display:none;'> Household member name and income. For income, please list in order (1) source; (2) amount, and (3) frequency - weekly/monthly/yearly.
+</div><div id='Q-36.1' name='Q-36.1' style='display:none;'>GOTO:37</div><div id='Q-37' name='Q-37' style='display:none;'> Do you have a housing voucher?
+</div><div id='Q-37.1' name='Q-37.1' style='display:none;'>GOTO:38</div><div id='Q-37.2' name='Q-37.2' style='display:none;'>GOTO:44</div><div id='Q-38' name='Q-38' style='display:none;'> What agency issued the voucher?
+</div><div id='Q-38.1' name='Q-38.1' style='display:none;'>GOTO:39</div><div id='Q-39' name='Q-39' style='display:none;'> What Type?
+</div><div id='Q-39.1' name='Q-39.1' style='display:none;'>GOTO:40</div><div id='Q-40' name='Q-40' style='display:none;'> When did you get it?
+</div><div id='Q-40.1' name='Q-40.1' style='display:none;'>GOTO:41</div><div id='Q-41' name='Q-41' style='display:none;'> How much is the voucher worth?
+</div><div id='Q-41.1' name='Q-41.1' style='display:none;'>GOTO:42</div><div id='Q-42' name='Q-42' style='display:none;'> How much is your share of the rent (% or actual amount paid)?
+</div><div id='Q-42.1' name='Q-42.1' style='display:none;'>GOTO:43</div><div id='Q-43' name='Q-43' style='display:none;'> When does it expire?
+</div><div id='Q-43.1' name='Q-43.1' style='display:none;'>GOTO:44</div><div id='Q-44' name='Q-44' style='display:none;'> What type of property is at issue?
+</div><div id='Q-44.1' name='Q-44.1' style='display:none;'>GOTO:46</div><div id='Q-44.2' name='Q-44.2' style='display:none;'>GOTO:46</div><div id='Q-44.3' name='Q-44.3' style='display:none;'>GOTO:46</div><div id='Q-44.4' name='Q-44.4' style='display:none;'>GOTO:48</div><div id='Q-44.5' name='Q-44.5' style='display:none;'>GOTO:48</div><div id='Q-44.6' name='Q-44.6' style='display:none;'>GOTO:45</div><div id='Q-44.7' name='Q-44.7' style='display:none;'>GOTO:47</div><div id='Q-45' name='Q-45' style='display:none;'> How many units are estimated in the complex?
+</div><div id='Q-45.1' name='Q-45.1' style='display:none;'>GOTO:46</div><div id='Q-46' name='Q-46' style='display:none;'> Does the owner live in one of the units? (Y/N)
+</div><div id='Q-46.1' name='Q-46.1' style='display:none;'>GOTO:48</div><div id='Q-47' name='Q-47' style='display:none;'> Specify other property type
+</div><div id='Q-47.1' name='Q-47.1' style='display:none;'>GOTO:48</div><div id='Q-48' name='Q-48' style='display:none;'> What is the rental price of the unit? Is there any other market information about the price?
+</div><div id='Q-48.1' name='Q-48.1' style='display:none;'>GOTO:49</div><div id='Q-49' name='Q-49' style='display:none;'> Number of Units in the Building
+</div><div id='Q-49.1' name='Q-49.1' style='display:none;'>GOTO:50</div><div id='Q-50' name='Q-50' style='display:none;'> Number of Buildings in the complex
+</div><div id='Q-50.1' name='Q-50.1' style='display:none;'>GOTO:51</div><div id='Q-51' name='Q-51' style='display:none;'> Number of Bedrooms in Unit at Issue
+</div><div id='Q-51.1' name='Q-51.1' style='display:none;'>GOTO:52</div><div id='Q-52' name='Q-52' style='display:none;'> Address of Unit/Apartment at Issue
+</div><div id='Q-52.1' name='Q-52.1' style='display:none;'>GOTO:53</div><div id='Q-53' name='Q-53' style='display:none;'> Rental Price Listed in Advertisement
+</div><div id='Q-53.1' name='Q-53.1' style='display:none;'>GOTO:54</div><div id='Q-54' name='Q-54' style='display:none;'> Identify the type of housing transaction that you are concerned about
+</div><div id='Q-54.1' name='Q-54.1' style='display:none;'>GOTO:58</div><div id='Q-54.2' name='Q-54.2' style='display:none;'>GOTO:58</div><div id='Q-54.3' name='Q-54.3' style='display:none;'>GOTO:58</div><div id='Q-54.4' name='Q-54.4' style='display:none;'>GOTO:58</div><div id='Q-54.5' name='Q-54.5' style='display:none;'>GOTO:55</div><div id='Q-55' name='Q-55' style='display:none;'> Please enter Court Location/Date of Notice to Quit/Date of Summons
+</div><div id='Q-55.1' name='Q-55.1' style='display:none;'>GOTO:56</div><div id='Q-56' name='Q-56' style='display:none;'> Have you provided an Answer?
+</div><div id='Q-56.1' name='Q-56.1' style='display:none;'>GOTO:57</div><div id='Q-56.2' name='Q-56.2' style='display:none;'>GOTO:57</div><div id='Q-57' name='Q-57' style='display:none;'> Is the landlord represented? If yes, who is the landlord's attorney?
+</div><div id='Q-57.1' name='Q-57.1' style='display:none;'>GOTO:58</div><div id='Q-58' name='Q-58' style='display:none;'> When did the discrimination occur? (List all dates)
+</div><div id='Q-58.1' name='Q-58.1' style='display:none;'>GOTO:59</div><div id='Q-59' name='Q-59' style='display:none;'> If there was an advertisement, please list real estate service (Zillow, Trulia, Etc.) and Ad or Listing # if available
+</div><div id='Q-59.1' name='Q-59.1' style='display:none;'>GOTO:60</div><div id='Q-60' name='Q-60' style='display:none;'> Please enter realtor or agent name/contact information if available
+</div><div id='Q-60.1' name='Q-60.1' style='display:none;'>GOTO:61</div><div id='Q-61' name='Q-61' style='display:none;'> Please enter real estate company/contact information if available
+</div><div id='Q-61.1' name='Q-61.1' style='display:none;'>GOTO:62</div><div id='Q-62' name='Q-62' style='display:none;'> Please enter landlord/owner name/contact information if available
+</div><div id='Q-62.1' name='Q-62.1' style='display:none;'>GOTO:63</div><div id='Q-63' name='Q-63' style='display:none;'> Management Company name/contact information if available
+</div><div id='Q-63.1' name='Q-63.1' style='display:none;'>GOTO:64</div><div id='Q-64' name='Q-64' style='display:none;'> Other provider/contact information if available
+</div><div id='Q-64.1' name='Q-64.1' style='display:none;'>GOTO:65</div><div id='Q-65' name='Q-65' style='display:none;'> Briefly describe the alleged discriminatory act that occurred
+</div><div id='Q-65.1' name='Q-65.1' style='display:none;'>GOTO:66</div><div id='Q-66' name='Q-66' style='display:none;'> How did you hear about us?
+</div><div id='Q-66.1' name='Q-66.1' style='display:none;'>GOTO:67</div><div id='Q-66.2' name='Q-66.2' style='display:none;'>GOTO:67</div><div id='Q-66.3' name='Q-66.3' style='display:none;'>GOTO:67</div><div id='Q-66.4' name='Q-66.4' style='display:none;'>GOTO:67</div><div id='Q-66.5' name='Q-66.5' style='display:none;'>GOTO:67</div><div id='Q-66.6' name='Q-66.6' style='display:none;'>GOTO:67</div><div id='Q-66.7' name='Q-66.7' style='display:none;'>GOTO:67</div><div id='Q-66.8' name='Q-66.8' style='display:none;'>GOTO:67</div><div id='Q-66.9' name='Q-66.9' style='display:none;'>GOTO:67</div><div id='Q-67' name='Q-67' style='display:none;'> Ready to send in your data?
+</div><div id='Q-67.1' name='Q-67.1' style='display:none;'> Thank you
+</div><div id='Q-67.2' name='Q-67.2' style='display:none;'> Have a nice day. Come back soon. </div><div id='A-1.1' name='A-1.1' style='display:none;'><variable></div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>1.1</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-4.1' name='A-4.1' style='display:none;'><variable></div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>4.1</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-7.1' name='A-7.1' style='display:none;'><variable></div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>7.1</div><div id='A-8.1' name='A-8.1' style='display:none;'><variable></div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>8.1</div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>9.1</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-11.1' name='A-11.1' style='display:none;'><variable></div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>11.1</div><div id='A-12.1' name='A-12.1' style='display:none;'><variable></div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>12.1</div><div id='A-13.1' name='A-13.1' style='display:none;'><variable></div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>13.1</div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>14.1</div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>15.1</div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>16.1</div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>17.1</div><div id='A-18.1' name='A-18.1' style='display:none;'><variable></div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:void('');</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>18.1</div><div id='A-19.1' name='A-19.1' style='display:none;'><variable></div><div id='A-href-19.1' name='A-href-19.1' style='display:none;'>javascript:void('');</div><div id='A-target-19.1' name='A-target-19.1' style='display:none;'></div><div id='X-19.1' name='X-19.1' style='display:none;'>19.1</div><div id='A-20.1' name='A-20.1' style='display:none;'><variable></div><div id='A-href-20.1' name='A-href-20.1' style='display:none;'>javascript:void('');</div><div id='A-target-20.1' name='A-target-20.1' style='display:none;'></div><div id='X-20.1' name='X-20.1' style='display:none;'>20.1</div><div id='A-21.1' name='A-21.1' style='display:none;'><variable></div><div id='A-href-21.1' name='A-href-21.1' style='display:none;'>javascript:void('');</div><div id='A-target-21.1' name='A-target-21.1' style='display:none;'></div><div id='X-21.1' name='X-21.1' style='display:none;'>21.1</div><div id='A-22.1' name='A-22.1' style='display:none;'><variable></div><div id='A-href-22.1' name='A-href-22.1' style='display:none;'>javascript:void('');</div><div id='A-target-22.1' name='A-target-22.1' style='display:none;'></div><div id='X-22.1' name='X-22.1' style='display:none;'>22.1</div><div id='A-23.1' name='A-23.1' style='display:none;'><variable></div><div id='A-href-23.1' name='A-href-23.1' style='display:none;'>javascript:void('');</div><div id='A-target-23.1' name='A-target-23.1' style='display:none;'></div><div id='X-23.1' name='X-23.1' style='display:none;'>23.1</div><div id='A-24.1' name='A-24.1' style='display:none;'><variable></div><div id='A-href-24.1' name='A-href-24.1' style='display:none;'>javascript:void('');</div><div id='A-target-24.1' name='A-target-24.1' style='display:none;'></div><div id='X-24.1' name='X-24.1' style='display:none;'>24.1</div><div id='A-25.1' name='A-25.1' style='display:none;'><variable></div><div id='A-href-25.1' name='A-href-25.1' style='display:none;'>javascript:void('');</div><div id='A-target-25.1' name='A-target-25.1' style='display:none;'></div><div id='X-25.1' name='X-25.1' style='display:none;'>25.1</div><div id='A-26.1' name='A-26.1' style='display:none;'><variable></div><div id='A-href-26.1' name='A-href-26.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.1' name='A-target-26.1' style='display:none;'></div><div id='X-26.1' name='X-26.1' style='display:none;'>26.1</div><div id='A-27.1' name='A-27.1' style='display:none;'><variable></div><div id='A-href-27.1' name='A-href-27.1' style='display:none;'>javascript:void('');</div><div id='A-target-27.1' name='A-target-27.1' style='display:none;'></div><div id='X-27.1' name='X-27.1' style='display:none;'>27.1</div><div id='A-28.1' name='A-28.1' style='display:none;'><variable></div><div id='A-href-28.1' name='A-href-28.1' style='display:none;'>javascript:void('');</div><div id='A-target-28.1' name='A-target-28.1' style='display:none;'></div><div id='X-28.1' name='X-28.1' style='display:none;'>28.1</div><div id='A-29.1' name='A-29.1' style='display:none;'><variable></div><div id='A-href-29.1' name='A-href-29.1' style='display:none;'>javascript:void('');</div><div id='A-target-29.1' name='A-target-29.1' style='display:none;'></div><div id='X-29.1' name='X-29.1' style='display:none;'>29.1</div><div id='A-30.1' name='A-30.1' style='display:none;'><variable></div><div id='A-href-30.1' name='A-href-30.1' style='display:none;'>javascript:void('');</div><div id='A-target-30.1' name='A-target-30.1' style='display:none;'></div><div id='X-30.1' name='X-30.1' style='display:none;'>30.1</div><div id='A-31.1' name='A-31.1' style='display:none;'><variable></div><div id='A-href-31.1' name='A-href-31.1' style='display:none;'>javascript:void('');</div><div id='A-target-31.1' name='A-target-31.1' style='display:none;'></div><div id='X-31.1' name='X-31.1' style='display:none;'>31.1</div><div id='A-32.1' name='A-32.1' style='display:none;'><variable></div><div id='A-href-32.1' name='A-href-32.1' style='display:none;'>javascript:void('');</div><div id='A-target-32.1' name='A-target-32.1' style='display:none;'></div><div id='X-32.1' name='X-32.1' style='display:none;'>32.1</div><div id='A-33.1' name='A-33.1' style='display:none;'><variable></div><div id='A-href-33.1' name='A-href-33.1' style='display:none;'>javascript:void('');</div><div id='A-target-33.1' name='A-target-33.1' style='display:none;'></div><div id='X-33.1' name='X-33.1' style='display:none;'>33.1</div><div id='A-34.1' name='A-34.1' style='display:none;'><variable></div><div id='A-href-34.1' name='A-href-34.1' style='display:none;'>javascript:void('');</div><div id='A-target-34.1' name='A-target-34.1' style='display:none;'></div><div id='X-34.1' name='X-34.1' style='display:none;'>34.1</div><div id='A-35.1' name='A-35.1' style='display:none;'><variable></div><div id='A-href-35.1' name='A-href-35.1' style='display:none;'>javascript:void('');</div><div id='A-target-35.1' name='A-target-35.1' style='display:none;'></div><div id='X-35.1' name='X-35.1' style='display:none;'>35.1</div><div id='A-36.1' name='A-36.1' style='display:none;'><variable></div><div id='A-href-36.1' name='A-href-36.1' style='display:none;'>javascript:void('');</div><div id='A-target-36.1' name='A-target-36.1' style='display:none;'></div><div id='X-36.1' name='X-36.1' style='display:none;'>36.1</div><div id='A-37.1' name='A-37.1' style='display:none;'> Yes
+</div><div id='A-href-37.1' name='A-href-37.1' style='display:none;'>javascript:void('');</div><div id='A-target-37.1' name='A-target-37.1' style='display:none;'></div><div id='X-37.1' name='X-37.1' style='display:none;'>Yes</div><div id='A-37.2' name='A-37.2' style='display:none;'> No
+</div><div id='A-href-37.2' name='A-href-37.2' style='display:none;'>javascript:void('');</div><div id='A-target-37.2' name='A-target-37.2' style='display:none;'></div><div id='X-37.2' name='X-37.2' style='display:none;'>No</div><div id='A-38.1' name='A-38.1' style='display:none;'><variable></div><div id='A-href-38.1' name='A-href-38.1' style='display:none;'>javascript:void('');</div><div id='A-target-38.1' name='A-target-38.1' style='display:none;'></div><div id='X-38.1' name='X-38.1' style='display:none;'>38.1</div><div id='A-39.1' name='A-39.1' style='display:none;'><variable></div><div id='A-href-39.1' name='A-href-39.1' style='display:none;'>javascript:void('');</div><div id='A-target-39.1' name='A-target-39.1' style='display:none;'></div><div id='X-39.1' name='X-39.1' style='display:none;'>39.1</div><div id='A-40.1' name='A-40.1' style='display:none;'><variable></div><div id='A-href-40.1' name='A-href-40.1' style='display:none;'>javascript:void('');</div><div id='A-target-40.1' name='A-target-40.1' style='display:none;'></div><div id='X-40.1' name='X-40.1' style='display:none;'>40.1</div><div id='A-41.1' name='A-41.1' style='display:none;'><variable></div><div id='A-href-41.1' name='A-href-41.1' style='display:none;'>javascript:void('');</div><div id='A-target-41.1' name='A-target-41.1' style='display:none;'></div><div id='X-41.1' name='X-41.1' style='display:none;'>41.1</div><div id='A-42.1' name='A-42.1' style='display:none;'><variable></div><div id='A-href-42.1' name='A-href-42.1' style='display:none;'>javascript:void('');</div><div id='A-target-42.1' name='A-target-42.1' style='display:none;'></div><div id='X-42.1' name='X-42.1' style='display:none;'>42.1</div><div id='A-43.1' name='A-43.1' style='display:none;'><variable></div><div id='A-href-43.1' name='A-href-43.1' style='display:none;'>javascript:void('');</div><div id='A-target-43.1' name='A-target-43.1' style='display:none;'></div><div id='X-43.1' name='X-43.1' style='display:none;'>43.1</div><div id='A-44.1' name='A-44.1' style='display:none;'> Single Family
+</div><div id='A-href-44.1' name='A-href-44.1' style='display:none;'>javascript:void('');</div><div id='A-target-44.1' name='A-target-44.1' style='display:none;'></div><div id='X-44.1' name='X-44.1' style='display:none;'>Single Family</div><div id='A-44.2' name='A-44.2' style='display:none;'> Duplex (2 Units)
+</div><div id='A-href-44.2' name='A-href-44.2' style='display:none;'>javascript:void('');</div><div id='A-target-44.2' name='A-target-44.2' style='display:none;'></div><div id='X-44.2' name='X-44.2' style='display:none;'>Duplex (2 Units)</div><div id='A-44.3' name='A-44.3' style='display:none;'> 3-4 Unit Building ("Triple Decker")
+</div><div id='A-href-44.3' name='A-href-44.3' style='display:none;'>javascript:void('');</div><div id='A-target-44.3' name='A-target-44.3' style='display:none;'></div><div id='X-44.3' name='X-44.3' style='display:none;'>3-4 Unit Building ("Triple Decker")</div><div id='A-44.4' name='A-44.4' style='display:none;'> Condominium
+</div><div id='A-href-44.4' name='A-href-44.4' style='display:none;'>javascript:void('');</div><div id='A-target-44.4' name='A-target-44.4' style='display:none;'></div><div id='X-44.4' name='X-44.4' style='display:none;'>Condominium</div><div id='A-44.5' name='A-44.5' style='display:none;'> Mobile Home
+</div><div id='A-href-44.5' name='A-href-44.5' style='display:none;'>javascript:void('');</div><div id='A-target-44.5' name='A-target-44.5' style='display:none;'></div><div id='X-44.5' name='X-44.5' style='display:none;'>Mobile Home</div><div id='A-44.6' name='A-44.6' style='display:none;'> Apartment Complex
+</div><div id='A-href-44.6' name='A-href-44.6' style='display:none;'>javascript:void('');</div><div id='A-target-44.6' name='A-target-44.6' style='display:none;'></div><div id='X-44.6' name='X-44.6' style='display:none;'>Apartment Complex</div><div id='A-44.7' name='A-44.7' style='display:none;'>Other, Please Specify
+</div><div id='A-href-44.7' name='A-href-44.7' style='display:none;'>javascript:void('');</div><div id='A-target-44.7' name='A-target-44.7' style='display:none;'></div><div id='X-44.7' name='X-44.7' style='display:none;'>Other, Please Specify</div><div id='A-45.1' name='A-45.1' style='display:none;'><variable></div><div id='A-href-45.1' name='A-href-45.1' style='display:none;'>javascript:void('');</div><div id='A-target-45.1' name='A-target-45.1' style='display:none;'></div><div id='X-45.1' name='X-45.1' style='display:none;'>45.1</div><div id='A-46.1' name='A-46.1' style='display:none;'><variable></div><div id='A-href-46.1' name='A-href-46.1' style='display:none;'>javascript:void('');</div><div id='A-target-46.1' name='A-target-46.1' style='display:none;'></div><div id='X-46.1' name='X-46.1' style='display:none;'>46.1</div><div id='A-47.1' name='A-47.1' style='display:none;'><variable></div><div id='A-href-47.1' name='A-href-47.1' style='display:none;'>javascript:void('');</div><div id='A-target-47.1' name='A-target-47.1' style='display:none;'></div><div id='X-47.1' name='X-47.1' style='display:none;'>47.1</div><div id='A-48.1' name='A-48.1' style='display:none;'><variable></div><div id='A-href-48.1' name='A-href-48.1' style='display:none;'>javascript:void('');</div><div id='A-target-48.1' name='A-target-48.1' style='display:none;'></div><div id='X-48.1' name='X-48.1' style='display:none;'>48.1</div><div id='A-49.1' name='A-49.1' style='display:none;'><variable></div><div id='A-href-49.1' name='A-href-49.1' style='display:none;'>javascript:void('');</div><div id='A-target-49.1' name='A-target-49.1' style='display:none;'></div><div id='X-49.1' name='X-49.1' style='display:none;'>49.1</div><div id='A-50.1' name='A-50.1' style='display:none;'><variable></div><div id='A-href-50.1' name='A-href-50.1' style='display:none;'>javascript:void('');</div><div id='A-target-50.1' name='A-target-50.1' style='display:none;'></div><div id='X-50.1' name='X-50.1' style='display:none;'>50.1</div><div id='A-51.1' name='A-51.1' style='display:none;'><variable></div><div id='A-href-51.1' name='A-href-51.1' style='display:none;'>javascript:void('');</div><div id='A-target-51.1' name='A-target-51.1' style='display:none;'></div><div id='X-51.1' name='X-51.1' style='display:none;'>51.1</div><div id='A-52.1' name='A-52.1' style='display:none;'><variable></div><div id='A-href-52.1' name='A-href-52.1' style='display:none;'>javascript:void('');</div><div id='A-target-52.1' name='A-target-52.1' style='display:none;'></div><div id='X-52.1' name='X-52.1' style='display:none;'>52.1</div><div id='A-53.1' name='A-53.1' style='display:none;'><variable></div><div id='A-href-53.1' name='A-href-53.1' style='display:none;'>javascript:void('');</div><div id='A-target-53.1' name='A-target-53.1' style='display:none;'></div><div id='X-53.1' name='X-53.1' style='display:none;'>53.1</div><div id='A-54.1' name='A-54.1' style='display:none;'>Rental
+</div><div id='A-href-54.1' name='A-href-54.1' style='display:none;'>javascript:void('');</div><div id='A-target-54.1' name='A-target-54.1' style='display:none;'></div><div id='X-54.1' name='X-54.1' style='display:none;'>Rental</div><div id='A-54.2' name='A-54.2' style='display:none;'>Sale
+</div><div id='A-href-54.2' name='A-href-54.2' style='display:none;'>javascript:void('');</div><div id='A-target-54.2' name='A-target-54.2' style='display:none;'></div><div id='X-54.2' name='X-54.2' style='display:none;'>Sale</div><div id='A-54.3' name='A-54.3' style='display:none;'>Advertisement
+</div><div id='A-href-54.3' name='A-href-54.3' style='display:none;'>javascript:void('');</div><div id='A-target-54.3' name='A-target-54.3' style='display:none;'></div><div id='X-54.3' name='X-54.3' style='display:none;'>Advertisement</div><div id='A-54.4' name='A-54.4' style='display:none;'> Lending/Insurance
+</div><div id='A-href-54.4' name='A-href-54.4' style='display:none;'>javascript:void('');</div><div id='A-target-54.4' name='A-target-54.4' style='display:none;'></div><div id='X-54.4' name='X-54.4' style='display:none;'>Lending/Insurance</div><div id='A-54.5' name='A-54.5' style='display:none;'> Eviction
+</div><div id='A-href-54.5' name='A-href-54.5' style='display:none;'>javascript:void('');</div><div id='A-target-54.5' name='A-target-54.5' style='display:none;'></div><div id='X-54.5' name='X-54.5' style='display:none;'>Eviction</div><div id='A-55.1' name='A-55.1' style='display:none;'><variable></div><div id='A-href-55.1' name='A-href-55.1' style='display:none;'>javascript:void('');</div><div id='A-target-55.1' name='A-target-55.1' style='display:none;'></div><div id='X-55.1' name='X-55.1' style='display:none;'>55.1</div><div id='A-56.1' name='A-56.1' style='display:none;'> Yes
+</div><div id='A-href-56.1' name='A-href-56.1' style='display:none;'>javascript:void('');</div><div id='A-target-56.1' name='A-target-56.1' style='display:none;'></div><div id='X-56.1' name='X-56.1' style='display:none;'>Yes</div><div id='A-56.2' name='A-56.2' style='display:none;'> No
+</div><div id='A-href-56.2' name='A-href-56.2' style='display:none;'>javascript:void('');</div><div id='A-target-56.2' name='A-target-56.2' style='display:none;'></div><div id='X-56.2' name='X-56.2' style='display:none;'>No</div><div id='A-57.1' name='A-57.1' style='display:none;'><variable></div><div id='A-href-57.1' name='A-href-57.1' style='display:none;'>javascript:void('');</div><div id='A-target-57.1' name='A-target-57.1' style='display:none;'></div><div id='X-57.1' name='X-57.1' style='display:none;'>57.1</div><div id='A-58.1' name='A-58.1' style='display:none;'><variable></div><div id='A-href-58.1' name='A-href-58.1' style='display:none;'>javascript:void('');</div><div id='A-target-58.1' name='A-target-58.1' style='display:none;'></div><div id='X-58.1' name='X-58.1' style='display:none;'>58.1</div><div id='A-59.1' name='A-59.1' style='display:none;'><variable></div><div id='A-href-59.1' name='A-href-59.1' style='display:none;'>javascript:void('');</div><div id='A-target-59.1' name='A-target-59.1' style='display:none;'></div><div id='X-59.1' name='X-59.1' style='display:none;'>59.1</div><div id='A-60.1' name='A-60.1' style='display:none;'><variable></div><div id='A-href-60.1' name='A-href-60.1' style='display:none;'>javascript:void('');</div><div id='A-target-60.1' name='A-target-60.1' style='display:none;'></div><div id='X-60.1' name='X-60.1' style='display:none;'>60.1</div><div id='A-61.1' name='A-61.1' style='display:none;'><variable></div><div id='A-href-61.1' name='A-href-61.1' style='display:none;'>javascript:void('');</div><div id='A-target-61.1' name='A-target-61.1' style='display:none;'></div><div id='X-61.1' name='X-61.1' style='display:none;'>61.1</div><div id='A-62.1' name='A-62.1' style='display:none;'><variable></div><div id='A-href-62.1' name='A-href-62.1' style='display:none;'>javascript:void('');</div><div id='A-target-62.1' name='A-target-62.1' style='display:none;'></div><div id='X-62.1' name='X-62.1' style='display:none;'>62.1</div><div id='A-63.1' name='A-63.1' style='display:none;'><variable></div><div id='A-href-63.1' name='A-href-63.1' style='display:none;'>javascript:void('');</div><div id='A-target-63.1' name='A-target-63.1' style='display:none;'></div><div id='X-63.1' name='X-63.1' style='display:none;'>63.1</div><div id='A-64.1' name='A-64.1' style='display:none;'><variable></div><div id='A-href-64.1' name='A-href-64.1' style='display:none;'>javascript:void('');</div><div id='A-target-64.1' name='A-target-64.1' style='display:none;'></div><div id='X-64.1' name='X-64.1' style='display:none;'>64.1</div><div id='A-65.1' name='A-65.1' style='display:none;'><variable></div><div id='A-href-65.1' name='A-href-65.1' style='display:none;'>javascript:void('');</div><div id='A-target-65.1' name='A-target-65.1' style='display:none;'></div><div id='X-65.1' name='X-65.1' style='display:none;'>65.1</div><div id='A-66.1' name='A-66.1' style='display:none;'>Newspaper
+</div><div id='A-href-66.1' name='A-href-66.1' style='display:none;'>javascript:void('');</div><div id='A-target-66.1' name='A-target-66.1' style='display:none;'></div><div id='X-66.1' name='X-66.1' style='display:none;'>Newspaper</div><div id='A-66.2' name='A-66.2' style='display:none;'> Internet/Website
+</div><div id='A-href-66.2' name='A-href-66.2' style='display:none;'>javascript:void('');</div><div id='A-target-66.2' name='A-target-66.2' style='display:none;'></div><div id='X-66.2' name='X-66.2' style='display:none;'>Internet/Website</div><div id='A-66.3' name='A-66.3' style='display:none;'> Someone assisting you with housing search
+</div><div id='A-href-66.3' name='A-href-66.3' style='display:none;'>javascript:void('');</div><div id='A-target-66.3' name='A-target-66.3' style='display:none;'></div><div id='X-66.3' name='X-66.3' style='display:none;'>Someone assisting you with housing search</div><div id='A-66.4' name='A-66.4' style='display:none;'> Friend/Coworker
+</div><div id='A-href-66.4' name='A-href-66.4' style='display:none;'>javascript:void('');</div><div id='A-target-66.4' name='A-target-66.4' style='display:none;'></div><div id='X-66.4' name='X-66.4' style='display:none;'>Friend/Coworker</div><div id='A-66.5' name='A-66.5' style='display:none;'> Advertisement
+</div><div id='A-href-66.5' name='A-href-66.5' style='display:none;'>javascript:void('');</div><div id='A-target-66.5' name='A-target-66.5' style='display:none;'></div><div id='X-66.5' name='X-66.5' style='display:none;'>Advertisement</div><div id='A-66.6' name='A-66.6' style='display:none;'> Social worker/Service provider
+</div><div id='A-href-66.6' name='A-href-66.6' style='display:none;'>javascript:void('');</div><div id='A-target-66.6' name='A-target-66.6' style='display:none;'></div><div id='X-66.6' name='X-66.6' style='display:none;'>Social worker/Service provider</div><div id='A-66.7' name='A-66.7' style='display:none;'> A Fair Housing Agency
+</div><div id='A-href-66.7' name='A-href-66.7' style='display:none;'>javascript:void('');</div><div id='A-target-66.7' name='A-target-66.7' style='display:none;'></div><div id='X-66.7' name='X-66.7' style='display:none;'>A Fair Housing Agency</div><div id='A-66.8' name='A-66.8' style='display:none;'> Legal Aid Agency
+</div><div id='A-href-66.8' name='A-href-66.8' style='display:none;'>javascript:void('');</div><div id='A-target-66.8' name='A-target-66.8' style='display:none;'></div><div id='X-66.8' name='X-66.8' style='display:none;'>Legal Aid Agency</div><div id='A-66.9' name='A-66.9' style='display:none;'> Other
+</div><div id='A-href-66.9' name='A-href-66.9' style='display:none;'>javascript:void('');</div><div id='A-target-66.9' name='A-target-66.9' style='display:none;'></div><div id='X-66.9' name='X-66.9' style='display:none;'>Other</div><div id='A-67.1' name='A-67.1' style='display:none;'> Yes
+</div><div id='A-href-67.1' name='A-href-67.1' style='display:none;'>javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_str','_blank')</div><div id='A-target-67.1' name='A-target-67.1' style='display:none;'>target="_blank"</div><div id='X-67.1' name='X-67.1' style='display:none;'>Yes</div><div id='A-67.2' name='A-67.2' style='display:none;'> No
+</div><div id='A-href-67.2' name='A-href-67.2' style='display:none;'>javascript:void('');</div><div id='A-target-67.2' name='A-target-67.2' style='display:none;'></div><div id='X-67.2' name='X-67.2' style='display:none;'>No</div>
+<script>
+	var QVnames = [['1','1'],['1.1','1.1'],['2','intake'],['2.1','2.1'],['3','clientname'],['3.1','3.1'],['4','city'],['4.1','4.1'],['5','address'],['5.1','5.1'],['6','zip'],['6.1','6.1'],['7','state'],['7.1','7.1'],['8','phonehome'],['8.1','8.1'],['9','phonecell'],['9.1','9.1'],['10','email'],['10.1','10.1'],['11','work'],['11.1','11.1'],['12','altcontact'],['12.1','12.1'],['13','relationshipcontact'],['13.1','13.1'],['14','altphone'],['14.1','14.1'],['15','dob'],['15.1','15.1'],['16','age'],['16.1','16.1'],['17','race'],['17.1','17.1'],['18','ethnicity'],['18.1','18.1'],['19','number'],['19.1','19.1'],['20','represent'],['20.1','20.1'],['21','children'],['21.1','21.1'],['22','childage'],['22.1','22.1'],['23','gender'],['23.1','23.1'],['24','genderexp'],['24.1','24.1'],['25','genderleg'],['25.1','25.1'],['26','sexualorient'],['26.1','26.1'],['27','color'],['27.1','27.1'],['28','immigration'],['28.1','28.1'],['29','marriage'],['29.1','29.1'],['30','disability'],['30.1','30.1'],['31','pubrent'],['31.1','31.1'],['32','veteran'],['32.1','32.1'],['33','religion'],['33.1','33.1'],['34','language'],['34.1','34.1'],['35','income'],['35.1','35.1'],['36','memberincome'],['36.1','36.1'],['37','voucher'],['37.1','37.1'],['37.2','37.2'],['38','agency'],['38.1','38.1'],['39','type'],['39.1','39.1'],['40','whenissued'],['40.1','40.1'],['41','worth'],['41.1','41.1'],['42','rentshare'],['42.1','42.1'],['43','expire'],['43.1','43.1'],['44','property'],['44.1','44.1'],['44.2','44.2'],['44.3','44.3'],['44.4','44.4'],['44.5','44.5'],['44.6','44.6'],['44.7','44.7'],['45','unitsinapartment'],['45.1','45.1'],['46','owner'],['46.1','46.1'],['47','specify'],['47.1','47.1'],['48','rate'],['48.1','48.1'],['49','units'],['49.1','49.1'],['50','buildings'],['50.1','50.1'],['51','bedrooms'],['51.1','51.1'],['52','unitaddress'],['52.1','52.1'],['53','listedrent'],['53.1','53.1'],['54','housingtransaction'],['54.1','54.1'],['54.2','54.2'],['54.3','54.3'],['54.4','54.4'],['54.5','54.5'],['55','evictioncourt'],['55.1','55.1'],['56','evictionanswer'],['56.1','56.1'],['56.2','56.2'],['57','representedlandlord'],['57.1','57.1'],['58','whenoccured'],['58.1','58.1'],['59','listinginfo'],['59.1','59.1'],['60','housingagent'],['60.1','60.1'],['61','estatecompany'],['61.1','61.1'],['62','landlordname'],['62.1','62.1'],['63','managementname'],['63.1','63.1'],['64','otherprovider'],['64.1','64.1'],['65','briefdescription'],['65.1','65.1'],['66','howdidyou'],['66.1','66.1'],['66.2','66.2'],['66.3','66.3'],['66.4','66.4'],['66.5','66.5'],['66.6','66.6'],['66.7','66.7'],['66.8','66.8'],['66.9','66.9'],['67','theend'],['67.1','67.1'],['67.2','67.2']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b> Housing Discrimination Intake Sheet</b></p><p>By  Student</p><p> Intake Information</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+		
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			} 
+		}
+			
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();			
+		} else {
+			if (restart == undefined) {
+				document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML				
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") { 
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n"; 
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);			
+			}
+
+		}
+		
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+					
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";		
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question 
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+				
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+						
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			if (tmp[i].innerHTML.match(regexp)) {
+				document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\"text\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"{if (event.keyCode==13)answerQ('"+nextlabel+"')}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";							
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";				
+				freetext = 0;
+			}
+		}			
+
+		if (restar == undefined) {
+			
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) { 
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";				
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+				
+		if (QNum != 0) { 
+			if (goingback == 0) {
+				scroll2Q(Jht,800);           	
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);     		
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+					
+	}
+
+	
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";						
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+	
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+		
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+		
+		return items;
+	}	
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+		
+	//show funtion
+	function show(id) { 
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else { 
+        	if (document.layers) {  
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';         
+    	} else { 
+        	if (document.layers) {  
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';         
+        	}   
+    	} else { 
+        	if (document.layers) {  
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+	
+	function swapvar(input) {
+		var output; 
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			} 
+		}
+		output = input
+		return output
+	}
+	
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+	
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+	
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+		
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+		
+		//look4goto(qn,path[path.length-1]);
+		
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it. 
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		look4goto(qn,path[path.length-1]);
+		
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+		
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}		
+	
+	function doc() {
+		var doc_output = ""; 
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}	
+	
+	function json_str() {
+		
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+	
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";		
+		}
+		
+		if (docAs) {
+			var doctext = document.createElement("textarea");
+			doctext.style.display ='none';
+			doctext.name= docAs;
+			doctext.value= doc();
+			document.getElementById('FORM').appendChild(doctext);
+			if (instructions) {
+				var instructtext = document.createElement("textarea");
+				instructtext.type='hidden';
+				instructtext.style.display ='none';
+				instructtext.name= 'i';
+				instructtext.value= instructions;
+				document.getElementById('FORM').appendChild(instructtext);	
+			}
+		}
+		if (transcriptAs) {
+			var ttext = document.createElement("textarea");
+			ttext.type='hidden';
+			ttext.style.display ='none';
+			ttext.name= transcriptAs;
+			ttext.value= transcript();
+			document.getElementById('FORM').appendChild(ttext);
+		}
+		if (jsonAs) {
+			var json = document.createElement("textarea");
+			json.type='hidden';
+			json.style.display ='none';
+			json.name= jsonAs;
+			json.value= json_str();
+			document.getElementById('FORM').appendChild(json);
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+	
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature. 
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem || 
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension     
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+		
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+		
+	// Optionally allow the user to choose a file name by providing 
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+		
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+			  
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+		
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+		
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+</BODY>
+</HTML>
